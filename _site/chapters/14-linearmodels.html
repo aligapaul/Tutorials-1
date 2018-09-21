@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Linear Models - Textbooks with Jupyter</title>
+<meta name="description" content="Linear Models">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Textbooks with Jupyter">
+<meta property="og:title" content="Linear Models">
+<meta property="og:url" content="http://localhost:4000/textbooks-with-jupyter/chapters/14-LinearModels">
+
+
+  <meta property="og:description" content="Linear Models">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-21T12:22:31-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/textbooks-with-jupyter/chapters/14-LinearModels">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Chris Holdgraf",
+      "url": "http://localhost:4000/textbooks-with-jupyter",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/textbooks-with-jupyter/feed.xml" type="application/atom+xml" rel="alternate" title="Textbooks with Jupyter Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/notebook-markdown.css">
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/custom.css">
+    <link rel="shortcut icon" type="image/png" href="/textbooks-with-jupyter/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+  </head>
+
+  <body class="layout--textbook">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" class="textbook" role="main">
+  <div id="textbook_wrapper">
+    
+  <div class="sidebar sticky textbook">
+  
+  
+    <img src="/textbooks-with-jupyter/images/logo/logo.png" class="textbook_logo" />
+    
+
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/00-Introduction"><span class="nav__sub-title">00-introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/01-JupyterNotebooks"><span class="nav__sub-title">01-jupyternotebooks</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/02-DataAnalysis"><span class="nav__sub-title">02-dataanalysis</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/03-Python"><span class="nav__sub-title">03-python</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/04-DataSciencePython"><span class="nav__sub-title">04-datasciencepython</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/05-DataGathering"><span class="nav__sub-title">05-datagathering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/06-DataWrangling"><span class="nav__sub-title">06-datawrangling</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/07-DataCleaning"><span class="nav__sub-title">07-datacleaning</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/08-DataPrivacy&Anonymization"><span class="nav__sub-title">08-dataprivacy&anonymization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/09-DataVisualization"><span class="nav__sub-title">09-datavisualization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/10-Distributions"><span class="nav__sub-title">10-distributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/11-TestingDistributions"><span class="nav__sub-title">11-testingdistributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares"><span class="nav__sub-title">13-ordinaryleastsquares</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/14-LinearModels"><span class="nav__sub-title">14-linearmodels</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/15-Clustering"><span class="nav__sub-title">15-clustering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/16-DimensionalityReduction"><span class="nav__sub-title">16-dimensionalityreduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/17-Classification"><span class="nav__sub-title">17-classification</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/18-NaturalLanguageProcessing"><span class="nav__sub-title">18-naturallanguageprocessing</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A1-PythonPackages"><span class="nav__sub-title">A1-pythonpackages</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A2-Git"><span class="nav__sub-title">A2-git</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/README"><span class="nav__sub-title">Readme</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+
+  
+  </div>
+
+
+    <article class="page textbook" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="headline" content="Linear Models">
+      <meta itemprop="description" content="Linear Models">
+      <meta itemprop="datePublished" content="September 21, 2018">
+      
+
+      <div class="page__inner-wrap">
+        
+          <header>
+            <h1 id="page-title" class="page__title" itemprop="headline">Linear Models
+</h1>
+          </header>
+        
+
+        <section class="page__content" itemprop="text">
+          
+            
+
+<!-- TOC will only show up if it has at least one item -->
+
+
+  <aside class="sidebar__right">
+    <nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-list-ul"></i>   On this page</h4></header>
+      <ul class="toc__menu">
+  <li><a href="#linear-models---overview">Linear Models - Overview</a></li>
+  <li><a href="#linear-models-pratice">Linear Models Pratice</a></li>
+  <li><a href="#interpreting-outputs">Interpreting Outputs</a></li>
+  <li><a href="#checking-our-model">Checking our Model</a></li>
+  <li><a href="#using-multiple-predictors">Using multiple predictors</a></li>
+  <li><a href="#using-multiple-predictors-in-sklearn">Using multiple predictors (in sklearn)</a></li>
+</ul>
+    </nav>
+  </aside>
+
+
+          
+          <!-- INTERACT LINKS -->
+
+    
+    
+    <a class="interact-button" href="https://mybinder.org/v2/gh/choldgraf/textbooks-with-jupyter/master?filepath=notebooks%2F14-LinearModels.ipynb">Interact</a>
+
+
+          
+<div class="alert alert-success">
+Linear (regression) modelling is a method of predicting the value of an output value as a linear combination of weight input values.
+</div>
+
+<h3 id="linear-models---overview">Linear Models - Overview</h3>
+
+<p>In the simplest case, we are trying to fit a line, so our model is of the form:</p>
+
+<script type="math/tex; mode=display">y = ax + b</script>
+
+<p>In this equation above, we are trying to predict some data variable $y$, from some other data variable $x$, where $a$ and $b$ are parameters we need to figure out, by fitting the model, and reflect the slope, and y-intercept, of the model (line) respectively.</p>
+
+<p>We need some procedure to go about finding $a$ and $b$. We will use OLS to do so - the values of $a$ and $b$ we want are those that fulfill the OLS solution - meaning the values that lead to the smallest distance between the predictions of the model, and our data.</p>
+
+<p>Note that you need data in which you know both $x$ and $y$ already to do so - to train your model).</p>
+
+<p>This approach can also be generalized, including, for example, more features used to predict our output of interest.</p>
+
+<p>Therefore, we will rewrite our model, in the general form, as:</p>
+
+<script type="math/tex; mode=display">y = a_0 + a_1 x_1 + a_2 x_2 + ... + a_n x_n + \epsilon</script>
+
+<p>In the equation above $a_0$ is the intercept (the same as $b$ from above), and $a_1$ to $a_n$ are $n$ parameters that we are trying to learn, as weights for data features $x_1$ to $x_n$. Our output variable (what we are trying to predict) is still $y$, and we’ve introduced $\epsilon$, which is the error, which basically captures unexplained variance.</p>
+
+<h3 id="linear-models-pratice">Linear Models Pratice</h3>
+
+<p>In the following, we will generate some data, with two features ‘D1’ and ‘D2’, that are correlated.</p>
+
+<p>Given the correlation, we can try and predict values of ‘D2’ from ‘D1’, and we will create a linear model to do so.</p>
+
+<p>This model, using the second notation from above, will be of the form:</p>
+
+<script type="math/tex; mode=display">D2 = a_0 + a_1 * D1</script>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Imports </span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c"># Statmodels &amp; patsy</span>
+<span class="kn">import</span> <span class="nn">patsy</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="n">sm</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate some correlated data</span>
+
+<span class="c"># Settings</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="n">covs</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="n">corr</span><span class="p">],</span> <span class="p">[</span><span class="n">corr</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="n">means</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c"># Generate the data</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="n">covs</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check out the data we generated</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dat</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dat</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span>
+<span class="c">#plt.scatter(dat[:, 0], dat[:, 1], alpha=0.5);</span>
+</code></pre></div></div>
+
+<p><img src="../images/./_chapters/14-LinearModels_5_0.png" alt="png" /></p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Put data into a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'D1'</span><span class="p">,</span> <span class="s">'D2'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Eye ball the data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>D1</th>
+      <th>D2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.305994</td>
+      <td>0.521119</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.262456</td>
+      <td>0.562350</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.289970</td>
+      <td>0.608496</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.025279</td>
+      <td>0.523315</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.561126</td>
+      <td>-1.320507</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check the correlation between D1 &amp; D2 (that it matches what was synthesized)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>D1</th>
+      <th>D2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>D1</th>
+      <td>1.000000</td>
+      <td>0.747094</td>
+    </tr>
+    <tr>
+      <th>D2</th>
+      <td>0.747094</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<h2 id="linear-models-with-statsmodels--patsy">Linear Models with Statsmodels &amp; Patsy</h2>
+
+<div class="alert alert-success">
+Statsmodels is a module for statistical analyses in Python. Patsy is a useful package to work with and describe statistical models.
+</div>
+
+<div class="alert alert-info">
+The official documentation for
+&lt;a href=http://www.statsmodels.org/stable/index.html&gt;statsmodels&lt;/a&gt;
+and
+&lt;a href=https://patsy.readthedocs.io/en/latest/&gt;patsy&lt;/a&gt;.
+</div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Patsy gives us an easy way to construct design matrices</span>
+<span class="c">#  For our purpose, 'design matrices' are just organized matrices of our predictor and output variables</span>
+<span class="n">outcome</span><span class="p">,</span> <span class="n">predictors</span> <span class="o">=</span> <span class="n">patsy</span><span class="o">.</span><span class="n">dmatrices</span><span class="p">(</span><span class="s">'D2 ~ D1'</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>If you check the type of ‘outcome’ and ‘predictors’, you will find they are custom patsy objects, of type ‘DesignMatrix’.</p>
+
+<p>If you print them out, you will see that they reseble pandas Series or DataFrames.</p>
+
+<p>You can think of them as customized dataframe-like objects for the specific purpose of being organized into matrices to be used for modelling.</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Now use statsmodels to intialize an OLS linear model</span>
+<span class="c">#  This step initializes the model, and provides the data (but does not actually compute the model)</span>
+<span class="n">mod</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">outcome</span><span class="p">,</span> <span class="n">predictors</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Note that statsmodels, just like scikit-learn that we will encounter a bit later, uses an object-oriented approach.</p>
+
+<p>In this approach you initialize complex objects that store the data and methods together, giving you an organized way to store and check data and parameters, to fit models, and then even to use them to make predictions and so on.</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check the type of the model object we just created.</span>
+<span class="c">#  You can also explore, with tab-complete, what is availabe from this object</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>statsmodels.regression.linear_model.OLS
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Finally, fit the model</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check out the results</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     D2   R-squared:                       0.558
+Model:                            OLS   Adj. R-squared:                  0.558
+Method:                 Least Squares   F-statistic:                     1261.
+Date:                Tue, 06 Mar 2018   Prob (F-statistic):          3.32e-179
+Time:                        00:18:34   Log-Likelihood:                -993.04
+No. Observations:                1000   AIC:                             1990.
+Df Residuals:                     998   BIC:                             2000.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.0011      0.021      0.054      0.957      -0.039       0.042
+D1             0.7546      0.021     35.506      0.000       0.713       0.796
+==============================================================================
+Omnibus:                        1.644   Durbin-Watson:                   1.970
+Prob(Omnibus):                  0.440   Jarque-Bera (JB):                1.508
+Skew:                          -0.068   Prob(JB):                        0.470
+Kurtosis:                       3.133   Cond. No.                         1.05
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+</code></pre></div></div>
+
+<h3 id="interpreting-outputs">Interpreting Outputs</h3>
+
+<p>Statsmodels gives us a lot of information!</p>
+
+<p>The top section is largely meta-data: it includes things like the model type, and time and date of us running it.</p>
+
+<p>It also includes the R-squared, which is an overall summary of the amount of variance the model is able to capture. This value ranges from 0-1, and ~0.5, that we see here, is quite a high value, suggesting a good model fit.</p>
+
+<p>The middle column is the actual model results.</p>
+
+<p>Each row reflects a parameter, and gives us it’s value (<code class="highlighter-rouge">coef</code>), the error (<code class="highlighter-rouge">std err</code>), the results of a statistical test regarding whether this parameter is a significant predictor of the output variable (<code class="highlighter-rouge">t</code>, which associated p-value as <code class="highlighter-rouge">P&gt;|t|</code>), and the confidence interval of the parameters value (<code class="highlighter-rouge">[0.025</code> - <code class="highlighter-rouge">0.975]</code>).</p>
+
+<p>The last model includes some other tests that are run on the data, that can help you check some descriptors of the input data, and also that they meet the required criteria of such a model fit.</p>
+
+<h3 id="checking-our-model">Checking our Model</h3>
+
+<p>In terms of the model itself, the most useful components are in the second row, in which the summary gives the parameter values, and p-values of our predictors, which in this case are ‘Intercept’, and ‘D2’.</p>
+
+<p>From the results above, we can grab the values of the parameters, and obtain the following model:</p>
+
+<script type="math/tex; mode=display">D2 = -0.0284 + 0.7246 * D1</script>
+
+<p>However, we should also keep in mind the statistical test that is reported, a test of whether the parameter value is significant (significantly different from zero). Using an alpha value of 0.05, in this case, the ‘D2’ parameter value is significant, but the ‘Intercept’ value is not. Since the parameter value for ‘Intercept’ is not significantly different from zero, we can decide not to include it in our final model.</p>
+
+<p>We therefore finish with the model:
+<script type="math/tex">D2 = 0.7246 * D1</script></p>
+
+<p>With this model, it is promising that are value of $a_1$, of 0.7246, is very close to the correlation value of the data points, which we set at 0.75!</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Plot the model fit line</span>
+
+<span class="c"># Plot the orginal data (as before)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'D1'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'D2'</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Data'</span><span class="p">);</span>
+
+<span class="c"># Generate and plot the model fit line</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'D1'</span><span class="p">]</span><span class="o">.</span><span class="nb">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s">'D1'</span><span class="p">]</span><span class="o">.</span><span class="nb">max</span><span class="p">())</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="mf">0.7246</span> <span class="o">*</span> <span class="n">xs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="s">'--k'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Model'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'D1'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'D2'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><img src="../images/./_chapters/14-LinearModels_20_0.png" alt="png" /></p>
+
+<h3 id="using-multiple-predictors">Using multiple predictors</h3>
+
+<p>The model above used only one predictor, fitting a simple straight line, and as such actually mimics previous approaches we’ve taken to fitting lines.</p>
+
+<p>We can also fit more than 1 predictor variable, and that is where the power of patsy and statsmodels really comes through, as these functions will fit more complex models, including as many parameters as we want, also dealing with some aspects of correlated features, and so on.</p>
+
+<p>Here, we will add a new variable to our dataframe, and fit an OLS model with two predictors.</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Add a new column of data to df</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'D3'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>D1</th>
+      <th>D2</th>
+      <th>D3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.305994</td>
+      <td>0.521119</td>
+      <td>0.019043</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.262456</td>
+      <td>0.562350</td>
+      <td>-0.631288</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.289970</td>
+      <td>0.608496</td>
+      <td>0.794971</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.025279</td>
+      <td>0.523315</td>
+      <td>0.447560</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.561126</td>
+      <td>-1.320507</td>
+      <td>-1.560199</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Predict D1 from D2 and D3</span>
+<span class="n">outcome</span><span class="p">,</span> <span class="n">predictors</span> <span class="o">=</span> <span class="n">patsy</span><span class="o">.</span><span class="n">dmatrices</span><span class="p">(</span><span class="s">'D1 ~ D2 + D3'</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+<span class="n">mod</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">outcome</span><span class="p">,</span> <span class="n">predictors</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check the model fit summary</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     D1   R-squared:                       0.558
+Model:                            OLS   Adj. R-squared:                  0.557
+Method:                 Least Squares   F-statistic:                     630.1
+Date:                Tue, 06 Mar 2018   Prob (F-statistic):          1.25e-177
+Time:                        00:18:34   Log-Likelihood:                -982.91
+No. Observations:                1000   AIC:                             1972.
+Df Residuals:                     997   BIC:                             1987.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -0.0177      0.020     -0.866      0.387      -0.058       0.022
+D2             0.7395      0.021     35.479      0.000       0.699       0.780
+D3            -0.0121      0.021     -0.587      0.557      -0.052       0.028
+==============================================================================
+Omnibus:                        0.273   Durbin-Watson:                   1.993
+Prob(Omnibus):                  0.872   Jarque-Bera (JB):                0.357
+Skew:                          -0.019   Prob(JB):                        0.836
+Kurtosis:                       2.916   Cond. No.                         1.04
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+</code></pre></div></div>
+
+<p>Note that statsmodels, as used above, is a powerful, general OLS model approach.</p>
+
+<p>You can further investigate how to include other features, such as interactions between input variables, and so on.</p>
+
+<h2 id="linear-regression-with-sklearn">Linear Regression with sklearn</h2>
+
+<p>Scikit-learn also has implementations of Linear Regression models.</p>
+
+<p>Here we will quickly demonstrate running the same linear OLS model fits as above, using sklearn instead of statsmodels.</p>
+
+<div class="alert alert-info">
+Linear regression in 
+&lt;a href=http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html&gt;sklearn&lt;/a&gt;.
+</div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Linear Models with sklearn</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Convert data into shape for easier use with sklearn</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">D1</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">D1</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">D2</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">D2</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">D3</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">D3</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Initialize linear regression model</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Fit the linear regression model</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span> <span class="n">d1</span><span class="p">)</span> <span class="c">#d1 = a0 + a1*d2</span>
+</code></pre></div></div>
+
+<div class="output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check the results of this</span>
+<span class="c">#  If you compare these to what we got with statsmodels above, they are indeed the same</span>
+<span class="k">print</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-0.0179497213127
+0.739686393719
+
+</code></pre></div></div>
+
+<h3 id="using-multiple-predictors-in-sklearn">Using multiple predictors (in sklearn)</h3>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Initialize and fit linear model</span>
+<span class="c"># d1 = a1*d2 + a2*d3 + a0</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">d2</span><span class="p">,</span> <span class="n">d3</span><span class="p">]),</span> <span class="n">d1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">d2</span><span class="p">,</span> <span class="n">d3</span><span class="p">])</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div></div>
+
+<div class="output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1000, 2)
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check the results of this</span>
+<span class="c">#  If you compare these to what we got with statsmodels above, they are indeed the same</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Intercept: </span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Theta D2 :</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Theta D3 :</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Intercept: 	 -0.0177498825239
+Theta D2 :	 0.739473377018
+Theta D3 :	 -0.0120672090985
+
+</code></pre></div></div>
+
+          
+        </section>
+
+        <footer class="page__meta">
+          
+          
+
+
+        </footer>
+
+        
+
+        
+  <nav class="pagination">
+    
+      <a href="/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares" class="pagination--pager" title="13-ordinaryleastsquares
+">Previous</a>
+    
+    
+      <a href="/textbooks-with-jupyter/chapters/15-Clustering" class="pagination--pager" title="15-clustering
+">Next</a>
+    
+  </nav>
+
+
+      </div>
+
+      
+    </article>
+  </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    
+
+    
+  <script src="/textbooks-with-jupyter/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr.min.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-store.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <!-- Custom scripts to load after site JS is loaded -->
+
+    <!-- Custom HTML used for the textbooks -->
+<!-- Configure, then load MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      processEnvironments: true
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full,Safe" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+// --- To auto-embed hub URLs in interact links if given in a RESTful fashion ---
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return jQuery.param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = $("a").each(function() {
+    var href = this.href;
+    // If the link is an internal link...
+    if (href.search("http://localhost:4000") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['hub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'hub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + jQuery.param(params);
+      this.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+  // Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    hubUrl = rest['hub'];
+    if (hubUrl !== undefined) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      link = $("a.interact-button")[0];
+      if (link !== undefined) {
+          // Update the interact link URL
+          var href = link.getAttribute('href');
+          if ('binder' == 'binder') {
+            // If binder links exist, we need to re-work them for jupyterhub
+            first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+            href = first + '?' + binder2Jupyterhub(href);
+          } else {
+            // If JupyterHub links, we only need to replace the hub url
+            href = href.replace("https://mybinder.org", hubUrl);
+          }
+          link.setAttribute('href', decodeURIComponent(href));
+
+          // Add text after interact link saying where we're launching
+          hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+          $("a.interact-button").after($('<div class="interact-context">on ' + hubUrlNoHttp + '</div>'));
+
+      }
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+// --- Highlight the part of sidebar for current page ---
+
+// helper to replace trailing slash
+function replaceSlash(string)
+{
+    return string.replace(/\/$/, "");
+}
+
+// Add a class to the current page in the sidebar
+function highlightSidebarCurrentPage()
+{
+  var currentpage = location.href;
+  var links = $('.sidebar .nav__items a');
+  var ii = 0;
+  for(ii; ii < links.length; ii++) {
+    var link = links[ii];
+    if(replaceSlash(link.href) == replaceSlash(currentpage)) {
+      // Add CSS for styling
+      link.classList.add("current");
+      // Scroll to this element
+      $('div.sidebar').scrollTop(link.offsetTop - 300);
+    }
+  }
+}
+
+// --- Set up copy/paste for code blocks ---
+function addCopyButtonToCode(){
+  // get all <code> elements
+  var allCodeBlocksElements = $( "div.input_area code, div.highlighter-rouge code" );
+
+  allCodeBlocksElements.each(function(ii) {
+   	// add different id for each code block
+
+  	// target
+    var currentId = "codeblock" + (ii + 1);
+    $(this).attr('id', currentId);
+
+    //trigger
+    var clipButton = '<button class="btn copybtn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+       $(this).after(clipButton);
+    });
+
+    new Clipboard('.btn');
+}
+
+// Run scripts when page is loaded
+$(document).ready(function () {
+  // Add anchors to H1 etc links
+  anchors.add();
+  // Highlight current page in sidebar
+  highlightSidebarCurrentPage();
+  // Add copy button to code blocks
+  addCopyButtonToCode();
+  // Update the Interact link if a REST param given
+  updateInteractLink();
+});
+</script>
+
+  </body>
+</html>

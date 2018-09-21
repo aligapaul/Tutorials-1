@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>03-python - Textbooks with Jupyter</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Textbooks with Jupyter">
+<meta property="og:title" content="03-python">
+<meta property="og:url" content="http://localhost:4000/textbooks-with-jupyter/chapters/03-Python">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-21T12:22:31-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/textbooks-with-jupyter/chapters/03-Python">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Chris Holdgraf",
+      "url": "http://localhost:4000/textbooks-with-jupyter",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/textbooks-with-jupyter/feed.xml" type="application/atom+xml" rel="alternate" title="Textbooks with Jupyter Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/notebook-markdown.css">
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/custom.css">
+    <link rel="shortcut icon" type="image/png" href="/textbooks-with-jupyter/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+  </head>
+
+  <body class="layout--textbook">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" class="textbook" role="main">
+  <div id="textbook_wrapper">
+    
+  <div class="sidebar sticky textbook">
+  
+  
+    <img src="/textbooks-with-jupyter/images/logo/logo.png" class="textbook_logo" />
+    
+
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/00-Introduction"><span class="nav__sub-title">00-introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/01-JupyterNotebooks"><span class="nav__sub-title">01-jupyternotebooks</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/02-DataAnalysis"><span class="nav__sub-title">02-dataanalysis</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/03-Python"><span class="nav__sub-title">03-python</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/04-DataSciencePython"><span class="nav__sub-title">04-datasciencepython</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/05-DataGathering"><span class="nav__sub-title">05-datagathering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/06-DataWrangling"><span class="nav__sub-title">06-datawrangling</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/07-DataCleaning"><span class="nav__sub-title">07-datacleaning</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/08-DataPrivacy&Anonymization"><span class="nav__sub-title">08-dataprivacy&anonymization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/09-DataVisualization"><span class="nav__sub-title">09-datavisualization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/10-Distributions"><span class="nav__sub-title">10-distributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/11-TestingDistributions"><span class="nav__sub-title">11-testingdistributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares"><span class="nav__sub-title">13-ordinaryleastsquares</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/14-LinearModels"><span class="nav__sub-title">14-linearmodels</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/15-Clustering"><span class="nav__sub-title">15-clustering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/16-DimensionalityReduction"><span class="nav__sub-title">16-dimensionalityreduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/17-Classification"><span class="nav__sub-title">17-classification</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/18-NaturalLanguageProcessing"><span class="nav__sub-title">18-naturallanguageprocessing</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A1-PythonPackages"><span class="nav__sub-title">A1-pythonpackages</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A2-Git"><span class="nav__sub-title">A2-git</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/README"><span class="nav__sub-title">Readme</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+
+  
+  </div>
+
+
+    <article class="page textbook" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="headline" content="03-python">
+      <meta itemprop="description" content="">
+      <meta itemprop="datePublished" content="September 21, 2018">
+      
+
+      <div class="page__inner-wrap">
+        
+          <header>
+            <h1 id="page-title" class="page__title" itemprop="headline">03-python
+</h1>
+          </header>
+        
+
+        <section class="page__content" itemprop="text">
+          
+            
+
+<!-- TOC will only show up if it has at least one item -->
+
+
+  <aside class="sidebar__right">
+    <nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-list-ul"></i>   On this page</h4></header>
+      <ul class="toc__menu">
+  <li><a href="#why-python">Why Python</a></li>
+  <li><a href="#tutorials-for-learning-python">Tutorials for Learning Python</a></li>
+  <li><a href="#python-practice">Python Practice</a></li>
+  <li><a href="#getting-un-stuck">Getting Un-Stuck</a></li>
+  <li><a href="#python2-vs-python3">Python2 vs. Python3</a></li>
+  <li><a href="#packages">Packages</a></li>
+</ul>
+    </nav>
+  </aside>
+
+
+          
+          <!-- INTERACT LINKS -->
+
+    
+    
+    <a class="interact-button" href="https://mybinder.org/v2/gh/choldgraf/textbooks-with-jupyter/master?filepath=notebooks%2F03-Python.ipynb">Interact</a>
+
+
+          <p><img src="img/python.png" alt="title" /></p>
+
+<div class="alert alert-success"> 
+Python is an 
+&lt;a href=https://en.wikipedia.org/wiki/Open-source_model&gt;open-source&lt;/a&gt;, 
+&lt;a href=https://en.wikipedia.org/wiki/High-level_programming_language&gt;high-level &lt;/a&gt;, 
+&lt;a href=https://en.wikipedia.org/wiki/General-purpose_programming_language&gt;general purpose&lt;/a&gt;, 
+&lt;a href=https://en.wikipedia.org/wiki/Interpreted_language&gt;interpreted&lt;/a&gt;, 
+&lt;a href=https://en.wikipedia.org/wiki/Programming_language&gt;programming language&lt;/a&gt;, 
+one of the most popular for data science applications. 
+</div>
+
+<div class="alert alert-info">
+The official Python
+&lt;a href=https://www.python.org&gt;website&lt;/a&gt;.
+</div>
+
+<h2 id="why-python">Why Python</h2>
+
+<ul>
+  <li>As a general purpose language, Python supports a large range of tasks.
+    <ul>
+      <li>Or put another way: ‘Python isn’t the best at anything, but it’s second best at everything’</li>
+      <li>This is useful. A data science project may include everything from scraping data from the web, analyzing a mixture or text and numerical data, computing features, training a model, creating high-quality graphs, and then hosting a website with your results.</li>
+    </ul>
+  </li>
+  <li>Python is explicitly and by design, user-friendly.</li>
+  <li>Python also has a massive user community, who contribute to a large number of high-quality, well maintained open-source tools.
+    <ul>
+      <li>The best language for your project is one which has the things you need.</li>
+    </ul>
+  </li>
+  <li>In part for the reasons listed above, Python is heavily used in industry.</li>
+</ul>
+
+<h2 id="tutorials-for-learning-python">Tutorials for Learning Python</h2>
+
+<ul>
+  <li><a href="https://www.codecademy.com/tracks/python">Codecademy</a> is great for beginner levels.</li>
+  <li>There is also the <a href="https://wiki.python.org/moin/BeginnersGuide">Official Beginners Guide</a>.</li>
+  <li><a href="https://learnpythonthehardway.org/book/">Learn Python the Hard Way</a> is a great tutorial for a more in-depth overview.
+    <ul>
+      <li>It isn’t actually particularly hard, although note that the currently available version is in Python2.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/jakevdp/WhirlwindTourOfPython">Whirlwind Tour of Python</a> is a free collection of Jupyter notebooks that takes you through Python.
+    <ul>
+      <li>This book is especially good (and specifically designed for) if you have some experience with programming in some other language, and want to quickly run through the specifics of Python.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="python-practice">Python Practice</h2>
+
+<ul>
+  <li><a href="http://www.pythonchallenge.com/">Python Challenge</a> is a good place for (sometimes infuriating) programming challenges.</li>
+  <li><a href="https://leetcode.com/">Leet Code</a> is a place for more intense technical coding questions and challenges (geared towards industry interviews).</li>
+</ul>
+
+<h2 id="getting-un-stuck">Getting Un-Stuck</h2>
+
+<p>At some point, you will get stuck. It happens. The internet is your friend.</p>
+
+<p>If you get an error, or aren’t sure how to proceed, use {your favourite search engine} with specific search terms relating to what you are trying to do. Sometimes this just means searching the error that you got.</p>
+
+<p>Your are likely to find responses on <a href="https://stackoverflow.com">StackOverflow</a> - which is basically a forum for programming questions, and a good place to find answers.</p>
+
+<h2 id="python2-vs-python3">Python2 vs. Python3</h2>
+
+<p>This class will use Python3 - it is the currently developed version of Python. Specifically 3.6 is the most recent version, released in 2016.</p>
+
+<p>Python3 was a break from Python2, because there were some larger changes that broke <a href="https://en.wikipedia.org/wiki/Backward_compatibility">backwards compatibility</a>.</p>
+
+<p>Python2 is still popular, and often used, partly because it takes a while with major new releases for everything to be available, and to get things updated. Now though, Python3 has pretty much everything available, and is the future of Python.</p>
+
+<p>In practice, Python 2 &amp; 3 are very similar - learning one will be mostly relevant for knowing the other, and code can usually be made compatible between both with minimal changes.</p>
+
+<div class="alert alert-info">
+The official Python documentation includes a discussion of &lt;a href=https://wiki.python.org/moin/Python2orPython3&gt;Py2 vs. Py3&lt;/a&gt;, including guidance on which to use.  
+</div>
+
+<h2 id="packages">Packages</h2>
+
+<div class="alert alert-success"> 
+Packages are basically just collections of code. The anaconda distribution comes with all the core packages you will need for this class. 
+</div>
+
+<div class="alert alert-info"> 
+For getting other packes, anaconda comes with
+&lt;a href=https://conda.io/docs/using/pkgs.html&gt;conda&lt;/a&gt;
+a package manager, with support for downloading and installing other packages.
+</div>
+
+          
+        </section>
+
+        <footer class="page__meta">
+          
+          
+
+
+        </footer>
+
+        
+
+        
+  <nav class="pagination">
+    
+      <a href="/textbooks-with-jupyter/chapters/02-DataAnalysis" class="pagination--pager" title="02-dataanalysis
+">Previous</a>
+    
+    
+      <a href="/textbooks-with-jupyter/chapters/04-DataSciencePython" class="pagination--pager" title="04-datasciencepython
+">Next</a>
+    
+  </nav>
+
+
+      </div>
+
+      
+    </article>
+  </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    
+
+    
+  <script src="/textbooks-with-jupyter/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr.min.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-store.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <!-- Custom scripts to load after site JS is loaded -->
+
+    <!-- Custom HTML used for the textbooks -->
+<!-- Configure, then load MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      processEnvironments: true
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full,Safe" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+// --- To auto-embed hub URLs in interact links if given in a RESTful fashion ---
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return jQuery.param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = $("a").each(function() {
+    var href = this.href;
+    // If the link is an internal link...
+    if (href.search("http://localhost:4000") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['hub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'hub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + jQuery.param(params);
+      this.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+  // Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    hubUrl = rest['hub'];
+    if (hubUrl !== undefined) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      link = $("a.interact-button")[0];
+      if (link !== undefined) {
+          // Update the interact link URL
+          var href = link.getAttribute('href');
+          if ('binder' == 'binder') {
+            // If binder links exist, we need to re-work them for jupyterhub
+            first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+            href = first + '?' + binder2Jupyterhub(href);
+          } else {
+            // If JupyterHub links, we only need to replace the hub url
+            href = href.replace("https://mybinder.org", hubUrl);
+          }
+          link.setAttribute('href', decodeURIComponent(href));
+
+          // Add text after interact link saying where we're launching
+          hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+          $("a.interact-button").after($('<div class="interact-context">on ' + hubUrlNoHttp + '</div>'));
+
+      }
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+// --- Highlight the part of sidebar for current page ---
+
+// helper to replace trailing slash
+function replaceSlash(string)
+{
+    return string.replace(/\/$/, "");
+}
+
+// Add a class to the current page in the sidebar
+function highlightSidebarCurrentPage()
+{
+  var currentpage = location.href;
+  var links = $('.sidebar .nav__items a');
+  var ii = 0;
+  for(ii; ii < links.length; ii++) {
+    var link = links[ii];
+    if(replaceSlash(link.href) == replaceSlash(currentpage)) {
+      // Add CSS for styling
+      link.classList.add("current");
+      // Scroll to this element
+      $('div.sidebar').scrollTop(link.offsetTop - 300);
+    }
+  }
+}
+
+// --- Set up copy/paste for code blocks ---
+function addCopyButtonToCode(){
+  // get all <code> elements
+  var allCodeBlocksElements = $( "div.input_area code, div.highlighter-rouge code" );
+
+  allCodeBlocksElements.each(function(ii) {
+   	// add different id for each code block
+
+  	// target
+    var currentId = "codeblock" + (ii + 1);
+    $(this).attr('id', currentId);
+
+    //trigger
+    var clipButton = '<button class="btn copybtn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+       $(this).after(clipButton);
+    });
+
+    new Clipboard('.btn');
+}
+
+// Run scripts when page is loaded
+$(document).ready(function () {
+  // Add anchors to H1 etc links
+  anchors.add();
+  // Highlight current page in sidebar
+  highlightSidebarCurrentPage();
+  // Add copy button to code blocks
+  addCopyButtonToCode();
+  // Update the Interact link if a REST param given
+  updateInteractLink();
+});
+</script>
+
+  </body>
+</html>

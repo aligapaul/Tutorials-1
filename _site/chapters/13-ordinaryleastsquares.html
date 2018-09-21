@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Ordinary Least Squares - Textbooks with Jupyter</title>
+<meta name="description" content="Ordinary Least Squares">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Textbooks with Jupyter">
+<meta property="og:title" content="Ordinary Least Squares">
+<meta property="og:url" content="http://localhost:4000/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares">
+
+
+  <meta property="og:description" content="Ordinary Least Squares">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-21T12:22:31-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Chris Holdgraf",
+      "url": "http://localhost:4000/textbooks-with-jupyter",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/textbooks-with-jupyter/feed.xml" type="application/atom+xml" rel="alternate" title="Textbooks with Jupyter Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/notebook-markdown.css">
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/custom.css">
+    <link rel="shortcut icon" type="image/png" href="/textbooks-with-jupyter/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+  </head>
+
+  <body class="layout--textbook">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" class="textbook" role="main">
+  <div id="textbook_wrapper">
+    
+  <div class="sidebar sticky textbook">
+  
+  
+    <img src="/textbooks-with-jupyter/images/logo/logo.png" class="textbook_logo" />
+    
+
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/00-Introduction"><span class="nav__sub-title">00-introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/01-JupyterNotebooks"><span class="nav__sub-title">01-jupyternotebooks</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/02-DataAnalysis"><span class="nav__sub-title">02-dataanalysis</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/03-Python"><span class="nav__sub-title">03-python</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/04-DataSciencePython"><span class="nav__sub-title">04-datasciencepython</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/05-DataGathering"><span class="nav__sub-title">05-datagathering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/06-DataWrangling"><span class="nav__sub-title">06-datawrangling</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/07-DataCleaning"><span class="nav__sub-title">07-datacleaning</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/08-DataPrivacy&Anonymization"><span class="nav__sub-title">08-dataprivacy&anonymization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/09-DataVisualization"><span class="nav__sub-title">09-datavisualization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/10-Distributions"><span class="nav__sub-title">10-distributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/11-TestingDistributions"><span class="nav__sub-title">11-testingdistributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares"><span class="nav__sub-title">13-ordinaryleastsquares</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/14-LinearModels"><span class="nav__sub-title">14-linearmodels</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/15-Clustering"><span class="nav__sub-title">15-clustering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/16-DimensionalityReduction"><span class="nav__sub-title">16-dimensionalityreduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/17-Classification"><span class="nav__sub-title">17-classification</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/18-NaturalLanguageProcessing"><span class="nav__sub-title">18-naturallanguageprocessing</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A1-PythonPackages"><span class="nav__sub-title">A1-pythonpackages</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A2-Git"><span class="nav__sub-title">A2-git</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/README"><span class="nav__sub-title">Readme</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+
+  
+  </div>
+
+
+    <article class="page textbook" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="headline" content="Ordinary Least Squares">
+      <meta itemprop="description" content="Ordinary Least Squares">
+      <meta itemprop="datePublished" content="September 21, 2018">
+      
+
+      <div class="page__inner-wrap">
+        
+          <header>
+            <h1 id="page-title" class="page__title" itemprop="headline">Ordinary Least Squares
+</h1>
+          </header>
+        
+
+        <section class="page__content" itemprop="text">
+          
+            
+
+<!-- TOC will only show up if it has at least one item -->
+
+
+
+          
+          <!-- INTERACT LINKS -->
+
+    
+    
+    <a class="interact-button" href="https://mybinder.org/v2/gh/choldgraf/textbooks-with-jupyter/master?filepath=notebooks%2F13-OrdinaryLeastSquares.ipynb">Interact</a>
+
+
+          
+<div class="alert alert-success">
+Ordinary least squares (OLS) means minimizing the error of the sum of squares between the predictions made by the model, and the observed data. 
+</div>
+
+<div class="alert alert-info">
+Find more information on OLS on
+&lt;a href=https://en.wikipedia.org/wiki/Ordinary_least_squares&gt;wikipedia&lt;/a&gt;
+check out this cool 
+&lt;a href=http://setosa.io/ev/ordinary-least-squares-regression/&gt;interactive tool&lt;/a&gt;
+and/or check out this 
+&lt;a href=https://www.datarobot.com/blog/ordinary-least-squares-in-python/&gt;tutorial&lt;/a&gt;
+about doing OLS in Python.
+</div>
+
+<h4 id="ordinary-least-squares">Ordinary Least Squares</h4>
+
+<p>Ordinary least squares can be thought of as an error function - a formalization of how we will calculate the error of a model, given the data.</p>
+
+<p>Typically, we want to minimize this error term. So the OLS solution to, for example, a linear model, is the model which has the lowest value for the sum of squared errors, calculated as the square of the difference between the model prediction of a data point, and the data point itself.</p>
+
+<p>Here, we’ll create a minimal dataset, and explore fitting a simple linear model fit to it, using OLS.</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Imports</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create some data</span>
+<span class="c"># x is an evenly space array of integers</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="c"># y is some data with underlying relationship y = (theta) * x</span>
+<span class="c">#  For this example, the true relation of the data is y = 2x</span>
+<span class="n">true_rel</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">true_rel</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="c"># Add some noise to the y dimension</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">noise</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Plot the data</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s">'.'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><img src="../images/./_chapters/13-OrdinaryLeastSquares_5_0.png" alt="png" /></p>
+
+<p>Observing the data above, we can see that there is some relation between the x and y dimension, but we want a way to measure what that relation is. OLS is a procedure to do so: find the model (in this case, line) that minimizes the squared distances between each observed data point and the model prediction.</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Reshape data to play nice with numpy</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Numpy provides us with a function to calculuate the OLS solution. In this case, we are fitting the model:</p>
+
+<script type="math/tex; mode=display">y = \theta x</script>
+
+<p>Note that we are not fitting an intercept here (no ‘b’ value, if you think of ‘y = ax + b’). In this simple model, we are therefore implicitly assuming an intercept value of zero. You can fit intercepts (and linear models with more parameters) with OLS, you just need to add them in.</p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Fit the (Ordinary) Least Squares best fit line using numpy</span>
+<span class="c">#  This gives us a fit value (theta), and residuals (how much error we have in this fit)</span>
+<span class="n">theta</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c"># Pull out theta value from array</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check what the OLS derived solution for theta is:</span>
+<span class="k">print</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.98695402961
+
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check how good our OLS solution is</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'The true relationship between y &amp; x is: </span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">true_rel</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'OLS calculated relationship between y &amp; x is: </span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The true relationship between y &amp; x is: 	 2
+OLS calculated relationship between y &amp; x is: 	 1.98695402961
+
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check what the residuals are</span>
+<span class="n">residuals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.3701226131131277
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Plot the raw data, with the true underlying relationship, and the OLS fit</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s">'x'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Data'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="s">'--b'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'OLS Fit'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">theta</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'True Fit'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><img src="../images/./_chapters/13-OrdinaryLeastSquares_13_0.png" alt="png" /></p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># With our model, we can predict the value of a new 'x' datapoint</span>
+<span class="n">new_x</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">pred_y</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">*</span> <span class="n">new_x</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'The prediction for a new x of {} is {:1.3f}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">pred_y</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The prediction for a new x of 2.5 is 4.967
+
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">pred_y</span><span class="p">,</span> <span class="s">'or'</span><span class="p">)</span>
+<span class="n">fig</span>
+</code></pre></div></div>
+
+<p><img src="../images/./_chapters/13-OrdinaryLeastSquares_15_0.png" alt="png" /></p>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># We can also see what the model would predict for all the points we did observe</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">*</span> <span class="n">x</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Residuals are the just the sum of squares between the model fit and the observed data points</span>
+<span class="c"># Re-calculate the residuals 'by hand'</span>
+<span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check that our residuals calculation matches the scipy implementation</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Error from :'</span><span class="p">,</span> <span class="n">residuals</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Error from :'</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error from : 1.37012261311
+Error from : 1.37012261311
+
+</code></pre></div></div>
+
+<div class="alert alert-success">
+Note: In practice, you won't use numpy for OLS. Other modules, like statsmodels, have implementations of OLS more explicitly for linear modelling. </div>
+
+<div class="alert alert-info">
+See the 'LinearModels' notebook and/or 
+&lt;a href=http://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html&gt;OLS in StatsModels&lt;/a&gt;.
+</div>
+
+          
+        </section>
+
+        <footer class="page__meta">
+          
+          
+
+
+        </footer>
+
+        
+
+        
+  <nav class="pagination">
+    
+      <a href="/textbooks-with-jupyter/chapters/11-TestingDistributions" class="pagination--pager" title="11-testingdistributions
+">Previous</a>
+    
+    
+      <a href="/textbooks-with-jupyter/chapters/14-LinearModels" class="pagination--pager" title="14-linearmodels
+">Next</a>
+    
+  </nav>
+
+
+      </div>
+
+      
+    </article>
+  </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    
+
+    
+  <script src="/textbooks-with-jupyter/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr.min.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-store.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <!-- Custom scripts to load after site JS is loaded -->
+
+    <!-- Custom HTML used for the textbooks -->
+<!-- Configure, then load MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      processEnvironments: true
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full,Safe" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+// --- To auto-embed hub URLs in interact links if given in a RESTful fashion ---
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return jQuery.param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = $("a").each(function() {
+    var href = this.href;
+    // If the link is an internal link...
+    if (href.search("http://localhost:4000") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['hub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'hub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + jQuery.param(params);
+      this.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+  // Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    hubUrl = rest['hub'];
+    if (hubUrl !== undefined) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      link = $("a.interact-button")[0];
+      if (link !== undefined) {
+          // Update the interact link URL
+          var href = link.getAttribute('href');
+          if ('binder' == 'binder') {
+            // If binder links exist, we need to re-work them for jupyterhub
+            first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+            href = first + '?' + binder2Jupyterhub(href);
+          } else {
+            // If JupyterHub links, we only need to replace the hub url
+            href = href.replace("https://mybinder.org", hubUrl);
+          }
+          link.setAttribute('href', decodeURIComponent(href));
+
+          // Add text after interact link saying where we're launching
+          hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+          $("a.interact-button").after($('<div class="interact-context">on ' + hubUrlNoHttp + '</div>'));
+
+      }
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+// --- Highlight the part of sidebar for current page ---
+
+// helper to replace trailing slash
+function replaceSlash(string)
+{
+    return string.replace(/\/$/, "");
+}
+
+// Add a class to the current page in the sidebar
+function highlightSidebarCurrentPage()
+{
+  var currentpage = location.href;
+  var links = $('.sidebar .nav__items a');
+  var ii = 0;
+  for(ii; ii < links.length; ii++) {
+    var link = links[ii];
+    if(replaceSlash(link.href) == replaceSlash(currentpage)) {
+      // Add CSS for styling
+      link.classList.add("current");
+      // Scroll to this element
+      $('div.sidebar').scrollTop(link.offsetTop - 300);
+    }
+  }
+}
+
+// --- Set up copy/paste for code blocks ---
+function addCopyButtonToCode(){
+  // get all <code> elements
+  var allCodeBlocksElements = $( "div.input_area code, div.highlighter-rouge code" );
+
+  allCodeBlocksElements.each(function(ii) {
+   	// add different id for each code block
+
+  	// target
+    var currentId = "codeblock" + (ii + 1);
+    $(this).attr('id', currentId);
+
+    //trigger
+    var clipButton = '<button class="btn copybtn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+       $(this).after(clipButton);
+    });
+
+    new Clipboard('.btn');
+}
+
+// Run scripts when page is loaded
+$(document).ready(function () {
+  // Add anchors to H1 etc links
+  anchors.add();
+  // Highlight current page in sidebar
+  highlightSidebarCurrentPage();
+  // Add copy button to code blocks
+  addCopyButtonToCode();
+  // Update the Interact link if a REST param given
+  updateInteractLink();
+});
+</script>
+
+  </body>
+</html>

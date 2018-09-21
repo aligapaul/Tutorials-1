@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data Privacy &amp; Anonymization - Textbooks with Jupyter</title>
+<meta name="description" content="Data Privacy &amp; Anonymization">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Textbooks with Jupyter">
+<meta property="og:title" content="Data Privacy &amp; Anonymization">
+<meta property="og:url" content="http://localhost:4000/textbooks-with-jupyter/chapters/08-DataPrivacy&Anonymization">
+
+
+  <meta property="og:description" content="Data Privacy &amp; Anonymization">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-21T12:22:31-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/textbooks-with-jupyter/chapters/08-DataPrivacy&Anonymization">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Chris Holdgraf",
+      "url": "http://localhost:4000/textbooks-with-jupyter",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/textbooks-with-jupyter/feed.xml" type="application/atom+xml" rel="alternate" title="Textbooks with Jupyter Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/notebook-markdown.css">
+    <link rel="stylesheet" href="/textbooks-with-jupyter/assets/css/custom.css">
+    <link rel="shortcut icon" type="image/png" href="/textbooks-with-jupyter/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+  </head>
+
+  <body class="layout--textbook">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" class="textbook" role="main">
+  <div id="textbook_wrapper">
+    
+  <div class="sidebar sticky textbook">
+  
+  
+    <img src="/textbooks-with-jupyter/images/logo/logo.png" class="textbook_logo" />
+    
+
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/00-Introduction"><span class="nav__sub-title">00-introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/01-JupyterNotebooks"><span class="nav__sub-title">01-jupyternotebooks</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/02-DataAnalysis"><span class="nav__sub-title">02-dataanalysis</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/03-Python"><span class="nav__sub-title">03-python</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/04-DataSciencePython"><span class="nav__sub-title">04-datasciencepython</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/05-DataGathering"><span class="nav__sub-title">05-datagathering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/06-DataWrangling"><span class="nav__sub-title">06-datawrangling</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/07-DataCleaning"><span class="nav__sub-title">07-datacleaning</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/08-DataPrivacy&Anonymization"><span class="nav__sub-title">08-dataprivacy&anonymization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/09-DataVisualization"><span class="nav__sub-title">09-datavisualization</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/10-Distributions"><span class="nav__sub-title">10-distributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/11-TestingDistributions"><span class="nav__sub-title">11-testingdistributions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/13-OrdinaryLeastSquares"><span class="nav__sub-title">13-ordinaryleastsquares</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/14-LinearModels"><span class="nav__sub-title">14-linearmodels</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/15-Clustering"><span class="nav__sub-title">15-clustering</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/16-DimensionalityReduction"><span class="nav__sub-title">16-dimensionalityreduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/17-Classification"><span class="nav__sub-title">17-classification</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/18-NaturalLanguageProcessing"><span class="nav__sub-title">18-naturallanguageprocessing</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A1-PythonPackages"><span class="nav__sub-title">A1-pythonpackages</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/A2-Git"><span class="nav__sub-title">A2-git</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/textbooks-with-jupyter/chapters/README"><span class="nav__sub-title">Readme</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+
+  
+  </div>
+
+
+    <article class="page textbook" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="headline" content="Data Privacy &amp; Anonymization">
+      <meta itemprop="description" content="Data Privacy &amp; Anonymization">
+      <meta itemprop="datePublished" content="September 21, 2018">
+      
+
+      <div class="page__inner-wrap">
+        
+          <header>
+            <h1 id="page-title" class="page__title" itemprop="headline">Data Privacy &amp; Anonymization
+</h1>
+          </header>
+        
+
+        <section class="page__content" itemprop="text">
+          
+            
+
+<!-- TOC will only show up if it has at least one item -->
+
+
+  <aside class="sidebar__right">
+    <nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-list-ul"></i>   On this page</h4></header>
+      <ul class="toc__menu">
+  <li><a href="#information-privacy">Information Privacy</a></li>
+  <li><a href="#anonymization">Anonymization</a></li>
+  <li><a href="#research-standards">Research Standards</a></li>
+  <li><a href="#hipaa---protection-for-health-related-information">HIPAA - Protection for Health Related Information</a></li>
+  <li><a href="#safe-harbour-method">Safe Harbour Method</a>
+    <ul>
+      <li><a href="#unique-identifiers">Unique Identifiers</a></li>
+    </ul>
+  </li>
+</ul>
+    </nav>
+  </aside>
+
+
+          
+          <!-- INTERACT LINKS -->
+
+    
+    
+    <a class="interact-button" href="https://mybinder.org/v2/gh/choldgraf/textbooks-with-jupyter/master?filepath=notebooks%2F08-DataPrivacy%26Anonymization.ipynb">Interact</a>
+
+
+          
+<p>A lot of data, perhaps the vast majority of data typically used in data science, is, directly or indirectly, about people.</p>
+
+<p>Individuals have certain privacy rights regarding who can know or share information about specifically identified individuals. This is true in particular about certain classes of sensitive information (for example, health-related information has special protections), but also applies to all other data as well.</p>
+
+<h2 id="information-privacy">Information Privacy</h2>
+
+<div class="alert alert-success">
+Information (or Data) Privacy refers to the legal, ethical, and practical issues of collecting, using and releasing data in which there is identifiable information about people included in the dataset. It also deals with when and how to deal with data privacy issues, and how to protect users' privacy.
+</div>
+
+<div class="alert alert-info">
+&lt;a href=https://en.wikipedia.org/wiki/Information_privacy&gt;Wikipedia&lt;/a&gt;
+has an overview of information privacy.
+</div>
+
+<h2 id="anonymization">Anonymization</h2>
+
+<div class="alert alert-success">
+Data Anonymization is a type of information sanitization - that is the removal of sensitive information - for the purpose of privacy protection. It is a procedure to modify a data set such that the individuals it reflect are anonymous. Most, typically this means the removal or personally identifiable information of data sets such that the identify of individuals contained in the data set are anonymous.
+</div>
+
+<div class="alert alert-info">
+&lt;a href=https://en.wikipedia.org/wiki/Data_anonymization&gt;Wikipedia&lt;/a&gt;
+also has an overview of data anonymization.
+</div>
+
+<p>Data protection and anonymization are interdisciplinary components of data science and data practice, including everything from the considerations of ethics &amp; legalities of data use, to the practical and technical challenges of protecting and anonymizing data.</p>
+
+<p>Anonymizing data typically comes down to removing any personally identifiable data from a dataset, or, if this information must be kept, separating the identifiable data from sensitive information.</p>
+
+<p>Part of the difficulty of data anonymization is that while we can provably demonstrate that a given dataset is anonymized, this rests on particular assumptions - most notably that the dataset is only provable anonymized under the assumption that no extra external information is used to attempt to de-identify it.</p>
+
+<p>In practice, de-anonymizing data can often be done by combining multiple datasets - using information from one or several available information sources to decode the individuals included in some other dataset.</p>
+
+<h1 id="regulations">Regulations</h1>
+
+<p>There are many official guidelines, rules and standards for data privacy and user identity protection, although much of it is case specific.</p>
+
+<p>At the minimum, what is legally required in terms of data protection depends, amongst other things, on:</p>
+<ul>
+  <li>What the data is / contains, and who it is about,
+    <ul>
+      <li>Certain data types, and/or populations may have special protections, for example health-related information.</li>
+    </ul>
+  </li>
+  <li>Who owns the data and in what capacity they are acting (company, university, etc.)
+    <ul>
+      <li>Regulations for scientific research are different than those for companies</li>
+    </ul>
+  </li>
+  <li>User agreements / consent procedures that were in place when the data were collected.
+    <ul>
+      <li>Individuals have a right to self-determination in terms of what their data is used for. Data should only be used for things that are covered by it’s terms of use / terms of collection / consent procedures.</li>
+    </ul>
+  </li>
+  <li>What the data is to be used for.
+    <ul>
+      <li>Often a combination of the what and the who, there may be specific regulations about how you must deal with, and what you can do, based on the goal of having and using the data.</li>
+    </ul>
+  </li>
+  <li>Where the data was collected and where it is stored, and who it is about.
+    <ul>
+      <li>Different regions (countries, etc) often have different regulations.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Much of these regulations apply more directly to the collection, storage, and release of datasets, but aspects also apply to the use of datasets, including publicly available datasets. Available datasets often have a user agreement for using the data, and, in particular, attempting to identify individuals from datasets may at a minimum break user agreements, and/or (depending on the nature of the data) be illegal based on consumer and research subject protection laws.</p>
+
+<h2 id="research-standards">Research Standards</h2>
+
+<div class="alert alert-success">
+Data collected and used for research purposes has it's own set of guidelines and requirements regarding the treatment of human subjects, and the collection, storage, use, and dissemination of data. These regulations focus, among other things, on the right to self-determination of human subjects to consent to what data is collected, and how it is used. Data collected for research purposes must follow restrictions based on these consent procedures. 
+</div>
+
+<div class="alert alert-info">
+Research protections under the Declaration of Helsinki: https://en.wikipedia.org/wiki/Declaration_of_Helsinki
+</div>
+
+<h2 id="hipaa---protection-for-health-related-information">HIPAA - Protection for Health Related Information</h2>
+
+<div class="alert alert-success">
+The Health Insurance Portability and Accountability Act (HIPAA) is a US federal government regulation that standardizes and protects individuals medical records and health related data. It includes terms for how data must be stored, and how they can be used &amp; shared.
+</div>
+
+<div class="alert alert-info">
+The official US federal government HIPAA information
+&lt;a href=https://www.hhs.gov/hipaa/&gt;guidelines&lt;/a&gt;
+include an overview of HIPAA.
+</div>
+
+<h2 id="safe-harbour-method">Safe Harbour Method</h2>
+
+<div class="alert alert-success">
+Safe Harbor is an official agreement regarding how to deal with datasets that have personal data, in particular, specific guidelines on what information to remove from datasets in order to anonymize them. It is a single set of data protection requirements shared across many contexts and countries. 
+</div>
+
+<div class="alert alert-info">
+The 
+&lt;a href=https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/&gt;official documentation&lt;/a&gt;
+for Safe Harbour includes guidelines on how to anonymize data.
+</div>
+
+<p>The Safe Harbor method requires that the following identifiers of the individual or of relatives, employers, or household members of the individual, are removed:</p>
+<ul>
+  <li>Names</li>
+  <li>Geographic Subdivisions smaller than a state**</li>
+  <li>Dates (such as birth dates, etc), and all ages above 90</li>
+  <li>Telephone Numbers</li>
+  <li>Vehicle Identification Numbers</li>
+  <li>Fax numbers</li>
+  <li>Device identifiers and serial numbers</li>
+  <li>Email addresses</li>
+  <li>Web Universal Resource Locators (URLs)</li>
+  <li>Social security numbers</li>
+  <li>Internet Protocol (IP) addresses</li>
+  <li>Medical record numbers</li>
+  <li>Biometric identifiers, including finger and voice prints</li>
+  <li>Health plan beneficiary numbers</li>
+  <li>Full-face photographs and any comparable images</li>
+  <li>Account numbers</li>
+  <li>Certificate/license numbers</li>
+  <li>Any other unique identifying number, characteristic, or code</li>
+</ul>
+
+<p>** The first three numbers of the zip code can be kept, provided that more than 20,000 people live in the region covered by all the zip codes that share the same initial three digits (the same geographic subdivision).</p>
+
+<h3 id="unique-identifiers">Unique Identifiers</h3>
+
+<p>The logic Safe Harbor (and/or Data Anonymization in general) is to remove any unique information that could be used to identify you.</p>
+
+<p>This is perhaps most obvious for things like names, but some of the seemingly less obvious specifications of Safe Harbour also relate to the idea that leaving the specified information in a dataset is a risk for identification of individuals contained in the dataset.</p>
+
+<p>For example, while it may be innocuous to talk about a 37 year old male who lives in Los Angeles (as there are many candidates, such that the specific individual is not revealed), it might actually be quite obvious who the person is when talking about a 37 year old male who lives in Potrero, California, a town of about 700 people. This is the same reason ages above 90 have to be removed - even in a fairly large area, say San Diego, it may be fairly obvious who the 98 year old female participant is.</p>
+
+<p>Basically - any information that makes you stand out is liable to identify you, and so anonymization attempts to remove these idiosyncracies from data, such that individuals do not stand out in a way that lets someone figure out who they are.</p>
+
+<p>This also underlies the difficulty in protecting data in the face of multiple data sources, since collecting observations together makes it much easier to start to pick out people more uniquely - so it may still be relatively easy to identify the 37 year old male from LA if you also happen to know (or figure out) that he has a poodle, is 5’6”, works at UCLA, and was at Griffith Park on Saturday, April 15th, all of which may be relatively easy to figure out by combining publicly available, or easily obtainable, data.</p>
+
+          
+        </section>
+
+        <footer class="page__meta">
+          
+          
+
+
+        </footer>
+
+        
+
+        
+  <nav class="pagination">
+    
+      <a href="/textbooks-with-jupyter/chapters/07-DataCleaning" class="pagination--pager" title="07-datacleaning
+">Previous</a>
+    
+    
+      <a href="/textbooks-with-jupyter/chapters/09-DataVisualization" class="pagination--pager" title="09-datavisualization
+">Next</a>
+    
+  </nav>
+
+
+      </div>
+
+      
+    </article>
+  </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    
+
+    
+  <script src="/textbooks-with-jupyter/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr.min.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-store.js"></script>
+<script src="/textbooks-with-jupyter/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <!-- Custom scripts to load after site JS is loaded -->
+
+    <!-- Custom HTML used for the textbooks -->
+<!-- Configure, then load MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      processEnvironments: true
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full,Safe" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+// --- To auto-embed hub URLs in interact links if given in a RESTful fashion ---
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return jQuery.param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = $("a").each(function() {
+    var href = this.href;
+    // If the link is an internal link...
+    if (href.search("http://localhost:4000") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['hub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'hub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + jQuery.param(params);
+      this.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+  // Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    hubUrl = rest['hub'];
+    if (hubUrl !== undefined) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      link = $("a.interact-button")[0];
+      if (link !== undefined) {
+          // Update the interact link URL
+          var href = link.getAttribute('href');
+          if ('binder' == 'binder') {
+            // If binder links exist, we need to re-work them for jupyterhub
+            first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+            href = first + '?' + binder2Jupyterhub(href);
+          } else {
+            // If JupyterHub links, we only need to replace the hub url
+            href = href.replace("https://mybinder.org", hubUrl);
+          }
+          link.setAttribute('href', decodeURIComponent(href));
+
+          // Add text after interact link saying where we're launching
+          hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+          $("a.interact-button").after($('<div class="interact-context">on ' + hubUrlNoHttp + '</div>'));
+
+      }
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+// --- Highlight the part of sidebar for current page ---
+
+// helper to replace trailing slash
+function replaceSlash(string)
+{
+    return string.replace(/\/$/, "");
+}
+
+// Add a class to the current page in the sidebar
+function highlightSidebarCurrentPage()
+{
+  var currentpage = location.href;
+  var links = $('.sidebar .nav__items a');
+  var ii = 0;
+  for(ii; ii < links.length; ii++) {
+    var link = links[ii];
+    if(replaceSlash(link.href) == replaceSlash(currentpage)) {
+      // Add CSS for styling
+      link.classList.add("current");
+      // Scroll to this element
+      $('div.sidebar').scrollTop(link.offsetTop - 300);
+    }
+  }
+}
+
+// --- Set up copy/paste for code blocks ---
+function addCopyButtonToCode(){
+  // get all <code> elements
+  var allCodeBlocksElements = $( "div.input_area code, div.highlighter-rouge code" );
+
+  allCodeBlocksElements.each(function(ii) {
+   	// add different id for each code block
+
+  	// target
+    var currentId = "codeblock" + (ii + 1);
+    $(this).attr('id', currentId);
+
+    //trigger
+    var clipButton = '<button class="btn copybtn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+       $(this).after(clipButton);
+    });
+
+    new Clipboard('.btn');
+}
+
+// Run scripts when page is loaded
+$(document).ready(function () {
+  // Add anchors to H1 etc links
+  anchors.add();
+  // Highlight current page in sidebar
+  highlightSidebarCurrentPage();
+  // Add copy button to code blocks
+  addCopyButtonToCode();
+  // Update the Interact link if a REST param given
+  updateInteractLink();
+});
+</script>
+
+  </body>
+</html>

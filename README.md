@@ -1,23 +1,23 @@
-# Tutorials
+# Textbooks with Jupyter and Jekyll
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/COGS108/Tutorials/master)
+This repository / website is a template for hosting your own textbook using
+Jupyter Notebooks and Jekyll.
 
-This repository is a set of tutorials for Hands-On Data Science. It is used to run along with the UC San Diego course COGS108 - [Data Science in Practice](https://github.com/COGS108/Overview). These tutorials presume some knowledge of the Python programming language. 
+<img src="images/logo/logo.png" width=200 />
 
-### Approach / Background
+Here are some highlights:
 
-These tutorials are designed to be a minimal introduction to what you need to know to get working with data science - to start to be able getting and examing data, and building up to working on data-science related projects. They cover the hands-on, coding components of the material. 
+* All course content is written in markdown and Jupyter Notebooks, stored in `notebooks/`
+* This site comes packaged with helper scripts to convert these into Jekyll pages (in `scripts/`)
+* Pages can have [Binder](https://mybinder.org) or JupyterHub links automatically added for interactivity.
+* The website itself is based on Jekyll, and is highly extensible and can be freely-hosted on GitHub.
 
-Conceptual and background material is covered in the [Lectures](https://github.com/COGS108/Lectures). Practice with these ideas is done through the [Assignments](https://github.com/COGS108/Assignments) as well as materials for doing [Projects](https://github.com/COGS108/Projects).
+This repository comes with some sample textbook files from the Data 8 course
+for Data Science at UC Berkeley. You can update these materials and all site
+content with your own, and have a Jupyter-based textbook ready to go shortly!
 
-These tutorials also try to interface with the vast world of existing tutorials, materials, and documentation. They are explicitly designed to give a quick introduction to a topic of interest, and then link out to more comprehensive resources. In that sense, they are designed to be more like a yellow pages, than an encyclopedia. 
+Here are a few links of interest:
 
-### Requirements
-
-The code and materials in this repository are created with [Jupyter notebooks](http://jupyter.org) and require the [anaconda distribution](https://www.anaconda.com/download/). Any other dependencies, for specific Tutorials, are specifically addressed in the notebooks. 
-
-### Development
-
-This repository is under active development, and is primarily developed and maintained by [TomDonoghue](https://github.com/TomDonoghue/), as well as by the COGS108 [staff](https://github.com/COGS108/Overview/blob/master/CONTRIBUTORS.md).
-
-Contributions to this resource are welcome and encouraged! If you have suggestions for new links or materials, and/or fixes for any issues you spot, you are welcome and invited to open Issues, and/or submit a Pull Request. 
+* **[A demo of the hosted textbook](http://predictablynoisy.com/textbooks-with-jupyter/ )**
+* **[A short guide to deploying your own textbook](https://predictablynoisy.com/textbooks-with-jupyter/guide/01_overview/)**
+* **[The markdown version of the guide in this repo](_guide/)**
