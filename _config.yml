@@ -319,3 +319,5 @@ defaults:
       footer: true
       sidebar:
         nav: sidebar-guide
+
+theme: jekyll-theme-minimal
