@@ -26,9 +26,11 @@ build_site:
 	python scripts/clean.py
 
 	rm -rf notebooks
+
 	git clone --depth 1 https://github.com/COGS108/tutorials notebooks
 
 
 	python scripts/generate_summary_from_folders.py --overwrite
-
 	python scripts/generate_textbook.py
+
+	rm -rf notebooks
