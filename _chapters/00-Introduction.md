@@ -10,6 +10,7 @@ nextchapter:
   title: '01-jupyternotebooks'
 redirect_from:
   - '/chapters/00-introduction'
+  - '/'
 ---
 
 # Data Science in Practice
