@@ -15,9 +15,9 @@ masthead                 : true  # Whether to include a masthead (header/navbar)
 masthead_logo            : images/logo/logo.png
 
 # Textbook settings
-hub_url                  : ""  # The URL for your JupyterHub/BinderHub.
-hub_name                 : ""  # The name of your JupyterHub (used for the button in the NavBar. If an empty string, no button is shown)
-hub_type                 : ""  # ['binder', 'jupyterhub']  Whether to build interact links for a BinderHub or a JupyterHub
+hub_url                  : "https://mybinder.org" # The URL for your JupyterHub/BinderHub.
+hub_name                 : "" # The name of your JupyterHub (used for the button in the NavBar. If an empty string, no button is shown)
+hub_type                 : "binder" # ['binder', 'jupyterhub']  Whether to build interact links for a BinderHub or a JupyterHub
 textbook_repo_base       : "https://github.com/"  # The site on which the textbook repository is hosted
 textbook_repo_org        : "COGS108"  # The username or organization that owns this repository
 textbook_repo_name       : "Tutorials"  # The name of the repository on the web
@@ -269,8 +269,6 @@ compress_html:
 collections:
   chapters:
     output: true
-  guide:
-    output: true
 
 
 # Defaults
@@ -307,15 +305,3 @@ defaults:
       toc: true
       toc_label: "  On this page"
       toc_icon: "list-ul"
-
-
-  # _guide
-  - scope:
-      path: ""
-      type: guide
-    values:
-      layout: single
-      masthead: true
-      footer: true
-      sidebar:
-        nav: sidebar-guide
