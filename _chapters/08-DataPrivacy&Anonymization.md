@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/08-DataPrivacy&Anonymization.ipynb
 title: '08-dataprivacy&anonymization'
 permalink: '/chapters/08-DataPrivacy&Anonymization'
 previouschapter:
@@ -25,7 +24,7 @@ Information (or Data) Privacy refers to the legal, ethical, and practical issues
 </div>
 
 <div class="alert alert-info">
-<a href=https://en.wikipedia.org/wiki/Information_privacy>Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Information_privacy" class="alert-link">Wikipedia</a>
 has an overview of information privacy.
 </div>
 
@@ -36,7 +35,7 @@ Data Anonymization is a type of information sanitization - that is the removal o
 </div>
 
 <div class="alert alert-info">
-<a href=https://en.wikipedia.org/wiki/Data_anonymization>Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Data_anonymization" class="alert-link">Wikipedia</a>
 also has an overview of data anonymization.
 </div>
 
@@ -73,7 +72,8 @@ Data collected and used for research purposes has it's own set of guidelines and
 </div>
 
 <div class="alert alert-info">
-Research protections under the Declaration of Helsinki: https://en.wikipedia.org/wiki/Declaration_of_Helsinki
+Research protections under the
+<a href="https://en.wikipedia.org/wiki/Declaration_of_Helsinki" class="alert-link">Declaration of Helsinki</a>.
 </div>
 
 ## HIPAA - Protection for Health Related Information
@@ -84,7 +84,7 @@ The Health Insurance Portability and Accountability Act (HIPAA) is a US federal 
 
 <div class="alert alert-info">
 The official US federal government HIPAA information
-<a href=https://www.hhs.gov/hipaa/>guidelines</a>
+<a href="https://www.hhs.gov/hipaa/" class="alert-link">guidelines</a>
 include an overview of HIPAA.
 </div>
 
@@ -96,7 +96,7 @@ Safe Harbor is an official agreement regarding how to deal with datasets that ha
 
 <div class="alert alert-info">
 The 
-<a href=https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/>official documentation</a>
+<a href="https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/" class="alert-link">official documentation</a>
 for Safe Harbour includes guidelines on how to anonymize data.
 </div>
 

@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/03-Python.ipynb
 title: '03-python'
 permalink: '/chapters/03-Python'
 previouschapter:
@@ -16,17 +15,17 @@ redirect_from:
 
 <div class="alert alert-success"> 
 Python is an 
-<a href=https://en.wikipedia.org/wiki/Open-source_model>open-source</a>, 
-<a href=https://en.wikipedia.org/wiki/High-level_programming_language>high-level </a>, 
-<a href=https://en.wikipedia.org/wiki/General-purpose_programming_language>general purpose</a>, 
-<a href=https://en.wikipedia.org/wiki/Interpreted_language>interpreted</a>, 
-<a href=https://en.wikipedia.org/wiki/Programming_language>programming language</a>, 
+<a href="https://en.wikipedia.org/wiki/Open-source_model" class="alert-link">open-source</a>, 
+<a href="https://en.wikipedia.org/wiki/High-level_programming_language" class="alert-link">high-level </a>, 
+<a href="https://en.wikipedia.org/wiki/General-purpose_programming_language" class="alert-link">general purpose</a>, 
+<a href="https://en.wikipedia.org/wiki/Interpreted_language" class="alert-link">interpreted</a>, 
+<a href="https://en.wikipedia.org/wiki/Programming_language" class="alert-link">programming language</a>, 
 one of the most popular for data science applications. 
 </div>
 
 <div class="alert alert-info">
 The official Python
-<a href=https://www.python.org>website</a>.
+<a href="https://www.python.org" class="alert-link">website</a>.
 </div>
 
 ## Why Python
@@ -73,7 +72,7 @@ Python2 is still popular, and often used, partly because it takes a while with m
 In practice, Python 2 & 3 are very similar - learning one will be mostly relevant for knowing the other, and code can usually be made compatible between both with minimal changes.
 
 <div class="alert alert-info">
-The official Python documentation includes a discussion of <a href=https://wiki.python.org/moin/Python2orPython3>Py2 vs. Py3</a>, including guidance on which to use.  
+The official Python documentation includes a discussion of <a href="https://wiki.python.org/moin/Python2orPython3" class="alert-link">Py2 vs. Py3</a>, including guidance on which to use.  
 </div>
 
 ## Packages
@@ -84,6 +83,6 @@ Packages are basically just collections of code. The anaconda distribution comes
 
 <div class="alert alert-info"> 
 For getting other packes, anaconda comes with
-<a href=https://conda.io/docs/using/pkgs.html>conda</a>
+<a href="https://conda.io/docs/using/pkgs.html" class="alert-link">conda</a>
 a package manager, with support for downloading and installing other packages.
 </div>

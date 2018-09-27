@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/02-DataAnalysis.ipynb
 title: '02-dataanalysis'
 permalink: '/chapters/02-DataAnalysis'
 previouschapter:
@@ -74,7 +73,7 @@ plt.ylabel('Weight (kg)'); plt.ylim([5, 25]);
 
 
 
-![png](../images/./_chapters/02-DataAnalysis_7_0.png)
+![png](../images/chapters/02-DataAnalysis_7_0.png)
 
 
 
@@ -117,7 +116,7 @@ f
 
 
 
-![png](../images/./_chapters/02-DataAnalysis_10_0.png)
+![png](../images/chapters/02-DataAnalysis_10_0.png)
 
 
 
@@ -180,7 +179,7 @@ plt.ylabel('Weight (kg)'); plt.ylim([300, 1700]);
 
 
 
-![png](../images/./_chapters/02-DataAnalysis_17_0.png)
+![png](../images/chapters/02-DataAnalysis_17_0.png)
 
 
 
@@ -237,7 +236,7 @@ plt.ylabel('Weight (kg)'); plt.ylim([300, 1700]);
 
 
 
-![png](../images/./_chapters/02-DataAnalysis_21_0.png)
+![png](../images/chapters/02-DataAnalysis_21_0.png)
 
 
 Evaluating classification, especially in unsupervised cases such as this (when we don't know the answer) is very much non-trivial. It's hard to know if there really are two groups here - or perhaps more, or fewer. We'll come back to how these analyses actually work and how to evaluate what you get out of them. 

@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/15-Clustering.ipynb
 title: '15-clustering'
 permalink: '/chapters/15-Clustering'
 previouschapter:
@@ -19,7 +18,7 @@ Clustering is the process of trying to find structure (clusters) in data.
 </div>
 
 <div class="alert alert-info">
-<a href=https://en.wikipedia.org/wiki/Cluster_analysis>Clustering</a>
+<a href="https://en.wikipedia.org/wiki/Cluster_analysis" class="alert-link">Clustering</a>
 article from wikipedia. 
 </div>
 
@@ -130,7 +129,7 @@ plt.ylabel('Petal Width', fontsize=14);
 
 
 
-![png](../images/./_chapters/15-Clustering_9_0.png)
+![png](../images/chapters/15-Clustering_9_0.png)
 
 
 
@@ -160,7 +159,7 @@ plt.legend(scatterpoints=1, loc='upper left');
 
 
 
-![png](../images/./_chapters/15-Clustering_10_0.png)
+![png](../images/chapters/15-Clustering_10_0.png)
 
 
 ## Task:
@@ -260,7 +259,7 @@ plt.ylabel('Petal Width', fontsize=14);
 
 
 
-![png](../images/./_chapters/15-Clustering_19_0.png)
+![png](../images/chapters/15-Clustering_19_0.png)
 
 
 It looks like it's doing pretty well! Other than some discrepancies between the versicolor and virginica boundary, KMeans is able to reconstruct the species labels algorithmically, given only information on a couple features. 

@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/16-DimensionalityReduction.ipynb
 title: '16-dimensionalityreduction'
 permalink: '/chapters/16-DimensionalityReduction'
 previouschapter:
@@ -20,7 +19,7 @@ Dimensionality reduction is the process of transforming a dataset to a lower dim
 
 <div class="alert alert-info">
 For an explainer on dimensionality reduction, with examples in real data, go
-<a href=http://colah.github.io/posts/2014-10-Visualizing-MNIST/>here</a>.
+<a href="http://colah.github.io/posts/2014-10-Visualizing-MNIST/" class="alert-link">here</a>.
 </div>
 
 ### Overview of Dimensionality Reduction
@@ -39,9 +38,9 @@ Principal Component Analysis (PCA) is procedure to transform a dataset into prin
 
 <div class="alert alert-info">
 For a paper that covers a full tutorial of PCA, go 
-<a href=https://arxiv.org/pdf/1404.1100.pdf>here</a>.
+<a href="https://arxiv.org/pdf/1404.1100.pdf" class="alert-link">here</a>.
 For a more technical overview and explainer, check out this 
-<a href=http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/>post</a>.
+<a href="http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/" class="alert-link">post</a>.
 </div>
 
 ### Principle Component Analysis
@@ -100,7 +99,7 @@ ax[1].hist(dat[:, 1]);
 
 
 
-![png](../images/./_chapters/16-DimensionalityReduction_7_0.png)
+![png](../images/chapters/16-DimensionalityReduction_7_0.png)
 
 
 
@@ -123,7 +122,7 @@ plt.scatter(dat[:, 0], dat[:, 1])
 
 
 
-![png](../images/./_chapters/16-DimensionalityReduction_8_1.png)
+![png](../images/chapters/16-DimensionalityReduction_8_1.png)
 
 
 ## Task:
@@ -175,12 +174,12 @@ plt.plot(out, '.')
 
 
 
-![png](../images/./_chapters/16-DimensionalityReduction_12_1.png)
+![png](../images/chapters/16-DimensionalityReduction_12_1.png)
 
 
 <div class="alert alert-info">
 For a more in depth tutorial on doing PCA in Python, go
-<a href=https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60>here</a>,
+<a href="https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60" class="alert-link">here</a>,
 and for a more technical orientation tutorial, go
-<a href=http://sebastianraschka.com/Articles/2015_pca_in_3_steps.html>here</a>.
+<a href="http://sebastianraschka.com/Articles/2015_pca_in_3_steps.html" class="alert-link">here</a>.
 </div>

@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/13-OrdinaryLeastSquares.ipynb
 title: '13-ordinaryleastsquares'
 permalink: '/chapters/13-OrdinaryLeastSquares'
 previouschapter:
@@ -20,11 +19,11 @@ Ordinary least squares (OLS) means minimizing the error of the sum of squares be
 
 <div class="alert alert-info">
 Find more information on OLS on
-<a href=https://en.wikipedia.org/wiki/Ordinary_least_squares>wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Ordinary_least_squares" class="alert-link">wikipedia</a>
 check out this cool 
-<a href=http://setosa.io/ev/ordinary-least-squares-regression/>interactive tool</a>
+<a href="http://setosa.io/ev/ordinary-least-squares-regression/" class="alert-link">interactive tool</a>
 and/or check out this 
-<a href=https://www.datarobot.com/blog/ordinary-least-squares-in-python/>tutorial</a>
+<a href="https://www.datarobot.com/blog/ordinary-least-squares-in-python/" class="alert-link">tutorial</a>
 about doing OLS in Python.
 </div>
 
@@ -79,7 +78,7 @@ plt.plot(x, y, '.');
 
 
 
-![png](../images/./_chapters/13-OrdinaryLeastSquares_5_0.png)
+![png](../images/chapters/13-OrdinaryLeastSquares_5_0.png)
 
 
 Observing the data above, we can see that there is some relation between the x and y dimension, but we want a way to measure what that relation is. OLS is a procedure to do so: find the model (in this case, line) that minimizes the squared distances between each observed data point and the model prediction. 
@@ -178,7 +177,7 @@ ax.legend();
 
 
 
-![png](../images/./_chapters/13-OrdinaryLeastSquares_13_0.png)
+![png](../images/chapters/13-OrdinaryLeastSquares_13_0.png)
 
 
 
@@ -210,7 +209,7 @@ fig
 
 
 
-![png](../images/./_chapters/13-OrdinaryLeastSquares_15_0.png)
+![png](../images/chapters/13-OrdinaryLeastSquares_15_0.png)
 
 
 
@@ -255,5 +254,5 @@ Note: In practice, you won't use numpy for OLS. Other modules, like statsmodels,
 
 <div class="alert alert-info">
 See the 'LinearModels' notebook and/or 
-<a href=http://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html>OLS in StatsModels</a>.
+<a href="http://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html" class="alert-link">OLS in StatsModels</a>.
 </div>

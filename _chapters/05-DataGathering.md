@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/05-DataGathering.ipynb
 title: '05-datagathering'
 permalink: '/chapters/05-DataGathering'
 previouschapter:
@@ -56,7 +55,7 @@ A Data Repository is basically just a place that data is stored. For our purpose
 
 <div class="alert alert-info">
 There is a curated list of good data source included in the 
-<a href=https://github.com/COGS108/Projects>project materials</a>.
+<a href="https://github.com/COGS108/Projects" class="alert-link">project materials</a>.
 </div>
 
 ## Databases
@@ -73,11 +72,11 @@ SQL (pronounced 'sequel') is a language used to 'communicate' with databases, ma
 
 <div class="alert alert-info">
 There is a useful introduction and tutorial to SQL
-<a href=http://www.sqlcourse.com/intro.html>here</a>
+<a href="http://www.sqlcourse.com/intro.html" class="alert-link">here</a>
 as well as some useful 'cheat sheets' 
-<a href=http://www.cheat-sheets.org/sites/sql.su/>here</a>
+<a href="http://www.cheat-sheets.org/sites/sql.su/" class="alert-link">here</a>
 and
-<a href=http://www.sqltutorial.org/wp-content/uploads/2016/04/SQL-cheat-sheet.pdf>here</a>.
+<a href="http://www.sqltutorial.org/wp-content/uploads/2016/04/SQL-cheat-sheet.pdf" class="alert-link">here</a>.
 </div>
 
 SQL is the standard, and most popular, way to interface with relational databases.
@@ -94,9 +93,9 @@ APIs are basically a way for software to talk to software - it is an interface i
 
 <div class="alert alert-info">
 For a simple explanation of APIs go
-<a href=https://medium.freecodecamp.com/what-is-an-api-in-english-please-b880a3214a82>here</a>
+<a href="https://medium.freecodecamp.com/what-is-an-api-in-english-please-b880a3214a82" class="alert-link">here</a>
 or for a much broader, more technical, overview try
-<a href=https://medium.com/@mattburgess/apis-a-basic-primer-f8250602597d>here</a>.
+<a href="https://medium.com/@mattburgess/apis-a-basic-primer-f8250602597d" class="alert-link">here</a>.
 </div>
 
 APIs offer a lot of functionality - you can send requests to the application to do all kinds of actions. In fact, any application interface that is designed to be used programatically is an API, including, for example, interfaces for using packages of code. 
@@ -197,7 +196,7 @@ dtype: object
 
 <div class="alert alert-info">
 This
-<a href=http://www.webopedia.com/TERM/A/API.html>list</a>
+<a href="http://www.webopedia.com/TERM/A/API.html" class="alert-link">list</a>
 includes a collection of commonly used and available APIs. 
 </div>
 
@@ -208,7 +207,7 @@ Web scraping is when you (programmatically) extract data from websites.
 </div>
 
 <div class="alert alert-info">
-<a href=https://en.wikipedia.org/wiki/Web_scraping>Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Web_scraping" class="alert-link">Wikipedia</a>
 has a useful page on web scraping.
 </div>
 

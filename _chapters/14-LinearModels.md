@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/14-LinearModels.ipynb
 title: '14-linearmodels'
 permalink: '/chapters/14-LinearModels'
 previouschapter:
@@ -92,7 +91,7 @@ plt.scatter(dat[:, 0], dat[:, 1], alpha=0.5);
 
 
 
-![png](../images/./_chapters/14-LinearModels_5_0.png)
+![png](../images/chapters/14-LinearModels_5_0.png)
 
 
 
@@ -233,9 +232,9 @@ Statsmodels is a module for statistical analyses in Python. Patsy is a useful pa
 
 <div class="alert alert-info">
 The official documentation for
-<a href=http://www.statsmodels.org/stable/index.html>statsmodels</a>
+<a href="http://www.statsmodels.org/stable/index.html" class="alert-link">statsmodels</a>
 and
-<a href=https://patsy.readthedocs.io/en/latest/>patsy</a>.
+<a href="https://patsy.readthedocs.io/en/latest/" class="alert-link">patsy</a>.
 </div>
 
 
@@ -386,7 +385,7 @@ plt.legend();
 
 
 
-![png](../images/./_chapters/14-LinearModels_20_0.png)
+![png](../images/chapters/14-LinearModels_20_0.png)
 
 
 ### Using multiple predictors
@@ -535,7 +534,7 @@ Here we will quickly demonstrate running the same linear OLS model fits as above
 
 <div class="alert alert-info">
 Linear regression in 
-<a href=http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html>sklearn</a>.
+<a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html" class="alert-link">sklearn</a>.
 </div>
 
 

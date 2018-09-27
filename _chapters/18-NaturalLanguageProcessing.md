@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/18-NaturalLanguageProcessing.ipynb
 title: '18-naturallanguageprocessing'
 permalink: '/chapters/18-NaturalLanguageProcessing'
 previouschapter:
@@ -20,7 +19,7 @@ Natural Language Processing (NLP) is the approach of analyzing text data, with c
 
 <div class="alert alert-info">
 Natural Language Processing on 
-<a href=https://en.wikipedia.org/wiki/Natural-language_processing>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Natural-language_processing" class="alert-link">wikipedia</a>.
 </div>
 
 ## NTLK: Natural Language Tool Kit
@@ -31,9 +30,9 @@ NLTK is the main Python module for text-analysis.
 
 <div class="alert alert-info">
 The NLTK organization website is 
-<a href=http://www.nltk.org/>here</a>
+<a href="http://www.nltk.org/" class="alert-link">here</a>
 and they have a whole book of tutorials 
-<a href=http://www.nltk.org/book/>here</a>.
+<a href="http://www.nltk.org/book/" class="alert-link">here</a>.
 </div>
 
 #### NLTK
@@ -131,7 +130,7 @@ Tokenization is the process of splitting text data into 'tokens', which are mean
 
 <div class="alert alert-info">
 More information on tokenization
-<a href=https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html>here</a>.
+<a href="https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html" class="alert-link">here</a>.
 </div>
 
 Tokenization can be done at different levels - you can, for example tokenize text into sentences, and/or into words. 
@@ -168,7 +167,7 @@ Part-of-Speech tagging is the process of labelling words with respect to their '
 
 <div class="alert alert-info">
 Part-of-speech tagging on 
-<a href=https://en.wikipedia.org/wiki/Part-of-speech_tagging>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Part-of-speech_tagging" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -355,7 +354,7 @@ Named entity recognition seeks to label words with the kinds of entities that th
 
 <div class="alert alert-info">
 Named entity recognition on 
-<a href=https://en.wikipedia.org/wiki/Named-entity_recognition>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Named-entity_recognition" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -401,7 +400,7 @@ print(entities)
 
 <div class="alert alert-info">
 Stop words on 
-<a href=https://en.wikipedia.org/wiki/Stop_words>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Stop_words" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -605,7 +604,7 @@ plt.xlabel('Frequency');
 
 
 
-![png](../images/./_chapters/18-NaturalLanguageProcessing_41_0.png)
+![png](../images/chapters/18-NaturalLanguageProcessing_41_0.png)
 
 
 As we can see, 'the', 'was', 'a', etc. appear a lot in the document. 
@@ -644,7 +643,7 @@ plt.xlabel('Frequency');
 
 
 
-![png](../images/./_chapters/18-NaturalLanguageProcessing_45_0.png)
+![png](../images/chapters/18-NaturalLanguageProcessing_45_0.png)
 
 
 This looks potentially more relevant / useful. We could continue exploring this BoW model, but let's instead pivot now, and explore using TFIDF.
@@ -698,7 +697,7 @@ plt.xlabel('IDF Score');
 
 
 
-![png](../images/./_chapters/18-NaturalLanguageProcessing_51_0.png)
+![png](../images/chapters/18-NaturalLanguageProcessing_51_0.png)
 
 
 We compare the plot with the following plot that shows the words with top 10 highest IDF.
@@ -726,7 +725,7 @@ plt.xlabel('IDF Score');
 
 
 
-![png](../images/./_chapters/18-NaturalLanguageProcessing_54_0.png)
+![png](../images/chapters/18-NaturalLanguageProcessing_54_0.png)
 
 
 As we can see, the frequently appearing words in the document get very low IDF scores, as compared to much rarer words. 

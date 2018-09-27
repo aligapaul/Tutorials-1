@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/04-DataSciencePython.ipynb
 title: '04-datasciencepython'
 permalink: '/chapters/04-DataSciencePython'
 previouschapter:
@@ -28,13 +27,13 @@ Scipy is an 'ecosystem', including a collection of open-source packages for scie
 
 <div class="alert alert-info">
 The scipy organization website is 
-<a href=https://www.scipy.org/>here</a>,
+<a href="https://www.scipy.org/" class="alert-link">here</a>,
 including a 
-<a href=https://www.scipy.org/about.html>description</a>
+<a href="https://www.scipy.org/about.html" class="alert-link">description</a>
 of the 'ecosystem', materials for 
-<a href=https://www.scipy.org/getting-started.html>getting started</a>, 
+<a href="https://www.scipy.org/getting-started.html" class="alert-link">getting started</a>, 
 and extensive 
-<a href=https://docs.scipy.org/doc/scipy/reference/tutorial/>tutorials</a>.
+<a href="https://docs.scipy.org/doc/scipy/reference/tutorial/" class="alert-link">tutorials</a>.
 </div>
 
 
@@ -99,9 +98,9 @@ Numpy contains an array object (for multi-dimensional data, typically of uniform
 
 <div class="alert alert-info">
 The numpy website is
-<a href=http://www.numpy.org/>here</a>,
+<a href="http://www.numpy.org/" class="alert-link">here</a>,
 including their official 
-<a href=https://docs.scipy.org/doc/numpy-dev/user/quickstart.html>quickstart tutorial</a>.
+<a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html" class="alert-link">quickstart tutorial</a>.
 </div>
 
 
@@ -175,7 +174,7 @@ False
 
 <div class="alert alert-info">
 For more practice with numpy, check out the collection 
-<a href=https://github.com/rougier/numpy-100>numpy exercises</a>.
+<a href="https://github.com/rougier/numpy-100" class="alert-link">numpy exercises</a>.
 </div>
 
 ![pandas](img/pandas.png)
@@ -186,11 +185,11 @@ Pandas is a package for organizing data in data structures, and performing data 
 
 <div class="alert alert-info">
 The official pandas website is 
-<a href=http://pandas.pydata.org/>here</a>,
+<a href="http://pandas.pydata.org/" class="alert-link">here</a>,
 including materials such as 
-<a href=http://pandas.pydata.org/pandas-docs/version/0.17.0/10min.html>10 minutes to pandas</a>
+<a href="http://pandas.pydata.org/pandas-docs/version/0.17.0/10min.html" class="alert-link">10 minutes to pandas</a>
 and a tutorial on 
-<a href=http://pandas.pydata.org/pandas-docs/version/0.17.0/basics.html>essential basic functionality</a>.
+<a href="http://pandas.pydata.org/pandas-docs/version/0.17.0/basics.html" class="alert-link">essential basic functionality</a>.
 </div>
 
 Pandas main data object is the DataFrame, which is a powerful data object to store mixed data types together with labels. 
@@ -363,9 +362,9 @@ dtype: float64
 
 <div class="alert alert-info">
 For more practice with pandas, you can try some collections of exercises, including
-<a href=https://github.com/guipsamora/pandas_exercises>this one</a>
+<a href="https://github.com/guipsamora/pandas_exercises" class="alert-link">this one</a>
 and
-<a href=https://github.com/ajcr/100-pandas-puzzles> this one</a>.
+<a href="https://github.com/ajcr/100-pandas-puzzles" class="alert-link"> this one</a>.
 </div>
 
 ![matplotlib](img/matplotlib.png)
@@ -376,11 +375,11 @@ Matplotlib is a library for plotting, in particular for 2D plots.
 
 <div class="alert alert-info">
 The official numpy 
-<a href=http://matplotlib.org/>website</a>
+<a href="http://matplotlib.org/" class="alert-link">website</a>
 includes the official
-<a href=http://matplotlib.org/users/pyplot_tutorial.html>tutorial</a>
+<a href="http://matplotlib.org/users/pyplot_tutorial.html" class="alert-link">tutorial</a>
 as well as a 
-<a href=https://matplotlib.org/gallery.html>gallery</a>
+<a href="https://matplotlib.org/gallery.html" class="alert-link">gallery</a>
 of examples that you can start from and modify.
 </div>
 
@@ -422,12 +421,12 @@ plt.plot([1, 2, 3], [4, 6, 8])
 
 
 
-![png](../images/./_chapters/04-DataSciencePython_33_1.png)
+![png](../images/chapters/04-DataSciencePython_33_1.png)
 
 
 <div class="alert alert-info">
 There are also many external materials for using matplotlib, including
-<a href=https://github.com/rougier/matplotlib-tutorial>this one</a>.
+<a href="https://github.com/rougier/matplotlib-tutorial" class="alert-link">this one</a>.
 </div>
 
 ![sklearn](img/sklearn.png)
@@ -438,9 +437,9 @@ Scikit-Learn is a packages for data mining, data analysis, and machine learning.
 
 <div class="alert alert-info">
 Here is the official scikit-learn
-<a href=http://scikit-learn.org/>website</a>
+<a href="http://scikit-learn.org/" class="alert-link">website</a>
 including their official
-<a href=http://scikit-learn.org/stable/tutorial/basic/tutorial.html>tutorial</a>.
+<a href="http://scikit-learn.org/stable/tutorial/basic/tutorial.html" class="alert-link">tutorial</a>.
 </div>
 
 
@@ -473,7 +472,7 @@ You can also search google for other resources and exercises.
 
 <div class="alert alert-info">
 A particularly good (and free) resource, covering all these tools is the
-<a href=https://github.com/jakevdp/PythonDataScienceHandbook/>Data Science Handbook </a>
+<a href="https://github.com/jakevdp/PythonDataScienceHandbook/" class="alert-link">Data Science Handbook </a>
 by
-<a href=https://github.com/jakevdp>Jake Vanderplas</a>.
+<a href="https://github.com/jakevdp" class="alert-link">Jake Vanderplas</a>.
 </div>

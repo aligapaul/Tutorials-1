@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/10-Distributions.ipynb
 title: '10-distributions'
 permalink: '/chapters/10-Distributions'
 previouschapter:
@@ -20,9 +19,9 @@ Probability distributions reflect the probabilities of occurence for the possibl
 
 <div class="alert alert-info">
 Probability distributions on 
-<a href=https://en.wikipedia.org/wiki/Probability_distribution>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Probability_distribution" class="alert-link">wikipedia</a>.
 If you want a more general refresher on probability / distributions, check out this
-<a href=https://betterexplained.com/articles/a-brief-introduction-to-probability-statistics/>article</a>.
+<a href="https://betterexplained.com/articles/a-brief-introduction-to-probability-statistics/" class="alert-link">article</a>.
 </div>
 
 
@@ -56,7 +55,7 @@ A uniform distribution is a distribution in which each possible value is equally
 
 <div class="alert alert-info">
 Uniform distribution on
-<a href=https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -84,7 +83,7 @@ plt.hist(dat);
 
 
 
-![png](../images/./_chapters/10-Distributions_8_0.png)
+![png](../images/chapters/10-Distributions_8_0.png)
 
 
 ## Normal Distribution
@@ -95,7 +94,7 @@ The Normal (also Gaussian, or 'Bell Curve') distribution, is a distribution defi
 
 <div class="alert alert-info">
 Normal distribution on 
-<a href=https://en.wikipedia.org/wiki/Normal_distribution>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Normal_distribution" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -123,7 +122,7 @@ plt.hist(dat, bins=20);
 
 
 
-![png](../images/./_chapters/10-Distributions_13_0.png)
+![png](../images/chapters/10-Distributions_13_0.png)
 
 
 ## Bernouilli Distribution
@@ -134,7 +133,7 @@ A Bernouilli Distribution is a binary distribution - it takes only two values (0
 
 <div class="alert alert-info">
 Bernouilli distribution on wikipedia
-<a href=https://en.wikipedia.org/wiki/Bernoulli_distribution>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Bernoulli_distribution" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -162,7 +161,7 @@ plt.hist(r);
 
 
 
-![png](../images/./_chapters/10-Distributions_18_0.png)
+![png](../images/chapters/10-Distributions_18_0.png)
 
 
 ## Gamma Distribution
@@ -173,7 +172,7 @@ The Gamma Distribution is continuous probably distribution defined by two parame
 
 <div class="alert alert-info">
 Gamma distribution on
-<a href=https://en.wikipedia.org/wiki/Gamma_distribution>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Gamma_distribution" class="alert-link">wikipedia</a>.
 </div>
 
 Given different parameters, gamma distributions can look quite different. Explore different parameters. 
@@ -205,7 +204,7 @@ plt.hist(dat, 50);
 
 
 
-![png](../images/./_chapters/10-Distributions_23_0.png)
+![png](../images/chapters/10-Distributions_23_0.png)
 
 
 ## Beta Distribution
@@ -216,7 +215,7 @@ The Beta Distribution is a distribution defined on the interval [0, 1], defined 
 
 <div class="alert alert-info">
 Beta distribution on 
-<a href=https://en.wikipedia.org/wiki/Beta_distribution>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Beta_distribution" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -244,7 +243,7 @@ plt.hist(dat, 50);
 
 
 
-![png](../images/./_chapters/10-Distributions_28_0.png)
+![png](../images/chapters/10-Distributions_28_0.png)
 
 
 ## Poisson Distribution
@@ -255,7 +254,7 @@ The Poisson Distribution that models events in fixed intervals of time, given a 
 
 <div class="alert alert-info">
 Poisson distribution on
-<a href=https://en.wikipedia.org/wiki/Poisson_distribution>wikipedia</a>.
+<a href="https://en.wikipedia.org/wiki/Poisson_distribution" class="alert-link">wikipedia</a>.
 </div>
 
 
@@ -283,5 +282,5 @@ plt.hist(dat);
 
 
 
-![png](../images/./_chapters/10-Distributions_33_0.png)
+![png](../images/chapters/10-Distributions_33_0.png)
 

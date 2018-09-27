@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/07-DataCleaning.ipynb
 title: '07-datacleaning'
 permalink: '/chapters/07-DataCleaning'
 previouschapter:
@@ -786,8 +785,8 @@ Note that in many real cases, visually scanning through data tables to look for 
 
 <div class="alert alert-info">
 Quartz has a useful
-<a href=https://github.com/Quartz/bad-data-guide>Bad Data Guide</a>,
+<a href="https://github.com/Quartz/bad-data-guide" class="alert-link">Bad Data Guide</a>,
 and the 
-<a href=http://pandas.pydata.org/pandas-docs/stable/tutorials.html>Pandas tutorials</a>
+<a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html" class="alert-link">Pandas tutorials</a>
 have lots of relevant materials, including a chapter (#7) on data cleaning.
 </div>

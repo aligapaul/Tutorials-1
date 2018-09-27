@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/A2-Git.ipynb
 title: 'A2-git'
 permalink: '/chapters/A2-Git'
 previouschapter:
@@ -20,9 +19,9 @@ Version Control reflects a set of practices related to managing files, in partic
 
 <div class="alert alert-info">
 You can read more about version control on
-<a href=https://en.wikipedia.org/wiki/Version_control>Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Version_control" class="alert-link">Wikipedia</a>
  or on the 
-<a href=https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control>git docs</a>.
+<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="alert-link">git docs</a>.
 </div>
 
 <img src="img/git.png" width="400px">
@@ -31,7 +30,10 @@ You can read more about version control on
 Git is a version control system: a tool to track changes in files, across multiple locations. 
 </div>
 <div class="alert alert-info">
-Git documentation: https://git-scm.com/doc
+
+Click through to 
+<a href="https://git-scm.com/doc" class="alert-link">git</a>.
+Git is an open-source software project. 
 </div>
 <hr>
 
@@ -41,7 +43,9 @@ Git documentation: https://git-scm.com/doc
 Github is a web based version of Git, and version control repository or internet hosting service. It's a place to put code that is tracked with git. 
 </div>
 <div class="alert alert-info">
-Github: https://github.com/ (note that Github, Inc is a company)
+Click through to 
+<a href="https://github.com/" class="alert-link">Github</a>.
+Note that Github is a company. 
 </div>
 <hr>
 
@@ -63,7 +67,7 @@ If you plan to use a GUI, we recommend SourceTree.
 
 <div class="alert alert-info">
 Source Tree tutorial documentation is available 
-<a href=https://confluence.atlassian.com/get-started-with-sourcetree>here</a>.
+<a href="https://confluence.atlassian.com/get-started-with-sourcetree" class="alert-link">here</a>.
 </div>
 
 ## Local vs. Remote
@@ -164,13 +168,13 @@ Git has many other functionalities, including [branching](https://git-scm.com/bo
 
 <div class="alert alert-info">
 There are many tutorials for working with Github, including an 
-<a href=https://try.github.io/levels/1/challenges/1>interactive tutorial</a>, 
+<a href="https://try.github.io/levels/1/challenges/1" class="alert-link">interactive tutorial</a>, 
 and a 
-<a href=https://guides.github.com/activities/hello-world/>Hello World</a>,
+<a href="https://guides.github.com/activities/hello-world/" class="alert-link">Hello World</a>,
 both made by Github
 <br>
 There are also several other useful guides and tutorials, including these ones available on
-<a href=http://lifehacker.com/5983680/how-the-heck-do-i-use-github>LifeHacker</a>, 
-<a href=https://www.atlassian.com/git/tutorials>Atlassian</a>, and
-<a href=http://neuroplausible.com/github>neuroplausible</a>.
+<a href="http://lifehacker.com/5983680/how-the-heck-do-i-use-github" class="alert-link">LifeHacker</a>, 
+<a href="https://www.atlassian.com/git/tutorials" class="alert-link">Atlassian</a>, and
+<a href="http://neuroplausible.com/github" class="alert-link">neuroplausible</a>.
 </div>

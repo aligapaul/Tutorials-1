@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/01-JupyterNotebooks.ipynb
 title: '01-jupyternotebooks'
 permalink: '/chapters/01-JupyterNotebooks'
 previouschapter:
@@ -22,9 +21,9 @@ Jupyter notebooks are a way to combine executable code, code outputs, and text i
 
 <div class="alert alert-info">
 The official documentation from project Jupyter is available 
-<a href=https://jupyter-notebook.readthedocs.io/en/stable/>here</a>
+<a href="https://jupyter-notebook.readthedocs.io/en/stable/" class="alert-link">here</a>
 and they also have some example notebooks 
-<a href=https://github.com/jupyter/notebook/tree/master/docs/source/examples/Notebook>here</a>
+<a href="https://github.com/jupyter/notebook/tree/master/docs/source/examples/Notebook" class="alert-link">here</a>
 .
 </div>
 
@@ -104,7 +103,7 @@ np.append??
 
 <div class="alert alert-success">
 Jupyter also has 
-<a href=https://en.wikipedia.org/wiki/Command-line_completion>tab complete</a>
+<a href="https://en.wikipedia.org/wiki/Command-line_completion" class="alert-link">tab complete</a>
 capacities, which can autocomplete what you are typing, and/or be used to explore what code is available.  
 </div>
 
@@ -114,17 +113,6 @@ capacities, which can autocomplete what you are typing, and/or be used to explor
 ```python
 # Move your cursor just after the period, press tab, and a drop menu will appear showing all possible completions
 np.
-```
-
-
-
-{:.output_traceback_line}
-```
-  File "<ipython-input-6-8fd3e83a7beb>", line 2
-    np.
-       ^
-SyntaxError: invalid syntax
-
 ```
 
 
@@ -165,7 +153,7 @@ It can be useful to clear and re-launch the kernel. You can do this from the 'ke
 </div>
 
 <div class="alert alert-info">
-Details on Magic Commands: http://ipython.readthedocs.io/en/stable/interactive/magics.html
+The iPython <a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html" class="alert-link">documentation</a> has more information on magic commands.
 </div>
 
 
@@ -234,7 +222,7 @@ pwd
 
 <div class="alert alert-info">
 For more useful information, check out Jupyter Notebooks 
-<a href=https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/>tips & tricks</a>
+<a href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" class="alert-link">tips & tricks</a>
 , and more information on how 
-<a href=http://jupyter.readthedocs.io/en/latest/architecture/how_jupyter_ipython_work.html>notebooks work</a>.
+<a href="http://jupyter.readthedocs.io/en/latest/architecture/how_jupyter_ipython_work.html" class="alert-link">notebooks work</a>.
 </div>

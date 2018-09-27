@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/00-Introduction.ipynb
 title: '00-introduction'
 permalink: '/chapters/00-Introduction'
 previouschapter:
@@ -54,7 +53,7 @@ They run in a web browser, and connect to a kernel to be able to execute code.
 
 <div class="alert alert-info">
 The official Jupyter website is available 
-<a href=http://jupyter.org>here</a>.
+<a href="http://jupyter.org" class="alert-link">here</a>.
 </div>
 
 <hr>
@@ -71,7 +70,7 @@ Notebooks can be rendered on webpages, and shared with others. NBViewer is a too
 
 <div class="alert alert-info">
 NBViewer is available 
-<a href=https://nbviewer.jupyter.org/>here</a>.
+<a href="https://nbviewer.jupyter.org/" class="alert-link">here</a>.
 </div>
 
 Note that NBViewer is not a tool that you need to download, or necessarily use at all, it is simply a useful tool available online to view notebooks.
@@ -86,9 +85,9 @@ Anaconda is an open-source distribution of Python, designed for scientific compu
 
 <div class="alert alert-info">
 The anaconda website is 
-<a href=https://www.anaconda.com>here</a>,
+<a href="https://www.anaconda.com" class="alert-link">here</a>,
 with the download page
-<a href=https://www.anaconda.com>here</a>.
+<a href="https://www.anaconda.com" class="alert-link">here</a>.
 </div>
 
 Anaconda itself is a distribution, that is, a collection of packages that are curated and maintained together, and serve as powerful. 
@@ -123,8 +122,9 @@ Python 3.6.3 :: Anaconda, Inc.
 
 ```
 
-<img src="img/git.png" style="float:left" width="400px">
-<img src="img/github.png" style="float:right" width="400px">
+<img src="img/git.png" width="400px">
+
+<img src="img/github.png" width="400px">
 
 <div class="alert alert-success">
 Git is a tool, a software package, for version control. Github is an online hosting service that can be used with git, and offers online tools to use git. 
@@ -132,9 +132,9 @@ Git is a tool, a software package, for version control. Github is an online host
 
 <div class="alert alert-info">
 Install 
-<a href=https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>git</a>,
+<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" class="alert-link">git</a>,
 if you don't already have it, and create an account on 
-<a href=https://github.com/>Github</a>.
+<a href="https://github.com/" class="alert-link">Github</a>.
 </div>
 
 Git & Github are not the same thing, though, in practice, they are commonly used together, whereby git is used as a tool to version control code and manage multiple copies stored across your computer, as well as on remote repositories that are stored on Github.
@@ -165,9 +165,9 @@ Source Tree is a free graphical user interface (GUI) for managing repositories w
 
 <div class="alert alert-info">
 Source Tree is available 
-<a href=https://www.sourcetreeapp.com>here</a>.
+<a href="https://www.sourcetreeapp.com" class="alert-link">here</a>.
 You will need an account on 
-<a href=https://www.atlassian.com>Atlassian</a>,
+<a href="https://www.atlassian.com" class="alert-link">Atlassian</a>,
 who make Source Tree, but this is free.
 </div>
 
@@ -181,7 +181,7 @@ Environments are isolated, independent installations of a programming language a
 
 <div class="alert alert-info">
 Anaconda has detailed instructions on using environments available 
-<a href=https://conda.io/docs/using/envs.html>here</a>.
+<a href="https://conda.io/docs/using/envs.html" class="alert-link">here</a>.
 </div>
 
 You do not need to use environments, however you may find it useful if you want or need to maintain multiple different versions of Python. 

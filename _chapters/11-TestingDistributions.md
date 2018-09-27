@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/11-TestingDistributions.ipynb
 title: '11-testingdistributions'
 permalink: '/chapters/11-TestingDistributions'
 previouschapter:
@@ -75,7 +74,7 @@ plt.legend();
 
 
 
-![png](../images/./_chapters/11-TestingDistributions_7_0.png)
+![png](../images/chapters/11-TestingDistributions_7_0.png)
 
 
 
@@ -151,7 +150,7 @@ plt.legend();
 
 
 
-![png](../images/./_chapters/11-TestingDistributions_13_0.png)
+![png](../images/chapters/11-TestingDistributions_13_0.png)
 
 
 This data, as plotted above, we might think looks quite normal, based on the visualization. 
@@ -176,7 +175,7 @@ plt.legend();
 
 
 
-![png](../images/./_chapters/11-TestingDistributions_15_0.png)
+![png](../images/chapters/11-TestingDistributions_15_0.png)
 
 
 

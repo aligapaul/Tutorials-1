@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/09-DataVisualization.ipynb
 title: '09-datavisualization'
 permalink: '/chapters/09-DataVisualization'
 previouschapter:
@@ -28,11 +27,11 @@ Data Visualization is a way to 'see' your data, for data exploration and data co
 
 <div class="alert alert-info">
 Check out matplotlibs official
-<a href=https://matplotlib.org/>website</a>
+<a href="https://matplotlib.org/" class="alert-link">website</a>
 including their introductory 
-<a href=http://matplotlib.org/users/beginner.html>tutorial</a>,
+<a href="http://matplotlib.org/users/beginner.html" class="alert-link">tutorial</a>,
 and list of 
-<a href=http://matplotlib.org/examples/>examples</a>.
+<a href="http://matplotlib.org/examples/" class="alert-link">examples</a>.
 </div>
 
 ### Pyplot vs Pylab
@@ -47,7 +46,7 @@ Ultimately, it all calls the same underlying code, there is just different synta
 
 <div class="alert alert-info">
 A description of the different ways to interact with matplotlib is availabe
-<a href=http://stackoverflow.com/questions/16849483/which-is-the-recommended-way-to-plot-matplotlib-or-pylab>here</a>.
+<a href="http://stackoverflow.com/questions/16849483/which-is-the-recommended-way-to-plot-matplotlib-or-pylab" class="alert-link">here</a>.
 </div>
 
 
@@ -97,7 +96,7 @@ plt.plot(x, y)
 
 
 
-![png](../images/./_chapters/09-DataVisualization_6_1.png)
+![png](../images/chapters/09-DataVisualization_6_1.png)
 
 
 Without any other information, matplotlib will add a number of plotting attributes by default.
@@ -155,7 +154,7 @@ plt.scatter(x, y2, c='red')
 
 
 
-![png](../images/./_chapters/09-DataVisualization_11_1.png)
+![png](../images/chapters/09-DataVisualization_11_1.png)
 
 
 We now have a scatter plot!
@@ -226,7 +225,7 @@ plt.legend(loc='upper left', scatterpoints=1, frameon=False)
 
 
 
-![png](../images/./_chapters/09-DataVisualization_13_1.png)
+![png](../images/chapters/09-DataVisualization_13_1.png)
 
 
 ### Figures and Axes
@@ -311,11 +310,11 @@ fig
 
 
 
-![png](../images/./_chapters/09-DataVisualization_18_0.png)
+![png](../images/chapters/09-DataVisualization_18_0.png)
 
 
 
 <div class="alert alert-info">
 As well as the official documentation, another useful tutorial is available
-<a href=https://www.labri.fr/perso/nrougier/teaching/matplotlib/>here</a>.
+<a href="https://www.labri.fr/perso/nrougier/teaching/matplotlib/" class="alert-link">here</a>.
 </div>

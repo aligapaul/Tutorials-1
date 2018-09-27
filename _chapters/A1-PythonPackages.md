@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/A1-PythonPackages.ipynb
 title: 'A1-pythonpackages'
 permalink: '/chapters/A1-PythonPackages'
 previouschapter:
@@ -20,7 +19,7 @@ The following is general overview of packages availabe in Python that may be use
 
 <div class="alert alert-info">
 For a much broader / fuller list of the Python ecosystem, check out the 
-<a href=https://github.com/vinta/awesome-python>Awesome Python</a> list. 
+<a href="https://github.com/vinta/awesome-python" class="alert-link">Awesome Python</a> list. 
 </div>
 
 # Data-Science Modules

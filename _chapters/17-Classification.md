@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/17-Classification.ipynb
 title: '17-classification'
 permalink: '/chapters/17-Classification'
 previouschapter:
@@ -19,7 +18,7 @@ Classification is process of categorizing data - of assigning data points to pre
 </div>
 
 <div class="alert alert-info">
-<a href=https://en.wikipedia.org/wiki/Statistical_classification>Classification</a>
+<a href="https://en.wikipedia.org/wiki/Statistical_classification" class="alert-link">Classification</a>
 article from wikipedia. 
 </div>
 
@@ -31,9 +30,9 @@ Support Vector Machines are a supervised classification algorithm.
 
 <div class="alert alert-info">
 This 
-<a href=https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-theory-f0812effc72>article</a>
+<a href="https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-theory-f0812effc72" class="alert-link">article</a>
 provides a nice overview of the SVM algorithm. This is also a code-based explainer from
-<a href=http://scikit-learn.org/stable/modules/svm.html>scikit-learn</a>.
+<a href="http://scikit-learn.org/stable/modules/svm.html" class="alert-link">scikit-learn</a>.
 </div>
 
 
@@ -100,7 +99,7 @@ plt.legend();
 
 
 
-![png](../images/./_chapters/17-Classification_8_0.png)
+![png](../images/chapters/17-Classification_8_0.png)
 
 
 ### Scikit-Learn Objects
@@ -208,7 +207,7 @@ fig
 
 
 
-![png](../images/./_chapters/17-Classification_17_0.png)
+![png](../images/chapters/17-Classification_17_0.png)
 
 
 
@@ -255,7 +254,7 @@ fig
 
 
 
-![png](../images/./_chapters/17-Classification_21_0.png)
+![png](../images/chapters/17-Classification_21_0.png)
 
 
 
@@ -265,7 +264,7 @@ Let's now draw the decision boundary - the boundary at which our learned model t
 
 <div class="alert alert-info">
 This following code to find and visualize the decision boundary and margins is adapted from this 
-<a href=http://scikit-learn.org/stable/auto_examples/svm/plot_separating_hyperplane.html#sphx-glr-auto-examples-svm-plot-separating-hyperplane-py>sklearn example</a>.
+<a href="http://scikit-learn.org/stable/auto_examples/svm/plot_separating_hyperplane.html#sphx-glr-auto-examples-svm-plot-separating-hyperplane-py" class="alert-link">sklearn example</a>.
 </div>
 
 
@@ -302,7 +301,7 @@ fig
 
 
 
-![png](../images/./_chapters/17-Classification_25_0.png)
+![png](../images/chapters/17-Classification_25_0.png)
 
 
 

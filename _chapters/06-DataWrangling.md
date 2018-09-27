@@ -1,5 +1,4 @@
 ---
-interact_link: notebooks/06-DataWrangling.ipynb
 title: '06-datawrangling'
 permalink: '/chapters/06-DataWrangling'
 previouschapter:
@@ -27,7 +26,9 @@ Python has some basic tools for I/O (input / output).
 </div>
 
 <div class="alert alert-info">
-Official Python documentation on I/O: https://docs.python.org/3/library/io.html
+Official Python 
+<a href="https://docs.python.org/3/library/io.html" class="alert-link">documentation</a> 
+on I/O.
 </div>
 
 
@@ -99,7 +100,9 @@ Pandas has a range of functions that will automatically read in whole files of s
 </div>
 
 <div class="alert alert-info">
-Official Pandas documentation on I/O: http://pandas.pydata.org/pandas-docs/stable/io.html
+Official Pandas
+<a href="http://pandas.pydata.org/pandas-docs/stable/io.html" class="alert-link">documentation</a> 
+on I/O. 
 </div>
 
 
@@ -132,7 +135,8 @@ There are many different standardized (and un-standardized) file types in which 
 </div>
 
 <div class="alert alert-info">
-More information on CSV files (on wikipedia): https://en.wikipedia.org/wiki/Comma-separated_values
+More information on CSV files from
+<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="alert-link">wikipedia</a>. 
 </div>
 
 
@@ -253,7 +257,8 @@ JavaScript Object Notation files can store hierachical key/value pairings. Think
 </div>
 
 <div class="alert alert-info">
-More information on JSON files (on wikipedia): https://en.wikipedia.org/wiki/JSON
+More information on JSON files from
+<a href="https://en.wikipedia.org/wiki/JSON" class="alert-link">wikipedia</a>.
 </div>
 
 
