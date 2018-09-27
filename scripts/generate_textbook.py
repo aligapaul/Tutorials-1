@@ -236,7 +236,9 @@ if __name__ == '__main__':
             build_call = '--FilesWriter.build_directory={}'.format(new_folder)
             # This is where images go - remove the _ so Jekyll will copy them over
             images_call = '--NbConvertApp.output_files_dir={}'.format(
-                op.join(IMAGES_FOLDER, new_folder.lstrip('_')))
+                # EDIT
+                op.join(IMAGES_FOLDER, new_folder.lstrip('./_')))
+                #op.join(IMAGES_FOLDER, new_folder.lstrip('_')))
             call = ['jupyter', 'nbconvert', '--log-level="CRITICAL"',
                     '--to', 'markdown', '--template', TEMPLATE_PATH,
                     images_call, build_call, tmp_notebook]
@@ -260,8 +262,10 @@ if __name__ == '__main__':
         yaml_fm = []
         yaml_fm += ['---']
 
-        if link.endswith('.ipynb'):
-            yaml_fm += ['interact_link: {}'.format(link.lstrip('./'))]
+        # EDIT: Turning this off stops the addition of the INTERACT links
+        #if link.endswith('.ipynb'):
+        #    yaml_fm += ['interact_link: {}'.format(link.lstrip('./'))]
+
         yaml_fm += ["title: '{}'".format(title)]
         yaml_fm += ["permalink: '{}'".format(_prepare_link(link))]
         yaml_fm += ['previouschapter:']
