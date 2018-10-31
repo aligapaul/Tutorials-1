@@ -1,0 +1,6 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Jekyll
+_site/
+.sass-cache
