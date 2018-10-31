@@ -1,0 +1,78 @@
+# This file contains the order and numbering for all sections in the book.
+# _includes/sidebar.html renders this as a sidebar.
+#
+# Each entry has the following schema:
+#
+# title: Title of chapter or section
+# url: URL of section. Use absolute URLs to link between pages
+# class: (optional) a CSS class to add to this link
+# sections: Contains chapter's sections
+# not_numbered: true if the section shouldn't have a number in the sidebar
+#   (e.g. Introduction or appendices)
+# divider: true if this entry should just be rendered as a horizontal divider
+#   in the sidebar. All other values are ignored.
+
+- title: Tutorials
+  url: /00-Introduction
+  not_numbered: true
+  sections:
+  - title: 00-Introduction
+    url: /00-Introduction
+    not_numbered: true
+  - title: 01-JupyterNotebooks
+    url: /01-JupyterNotebooks
+    not_numbered: true
+  - title: 02-DataAnalysis
+    url: /02-DataAnalysis
+    not_numbered: true
+  - title: 03-Python
+    url: /03-Python
+    not_numbered: true
+  - title: 04-DataSciencePython
+    url: /04-DataSciencePython
+    not_numbered: true
+  - title: 05-DataGathering
+    url: /05-DataGathering
+    not_numbered: true
+  - title: 06-DataWrangling
+    url: /06-DataWrangling
+    not_numbered: true
+  - title: 07-DataCleaning
+    url: /07-DataCleaning
+    not_numbered: true
+  - title: 08-DataPrivacy&Anonymization
+    url: /08-DataPrivacy&Anonymization
+    not_numbered: true
+  - title: 09-DataVisualization
+    url: /09-DataVisualization
+    not_numbered: true
+  - title: 10-Distributions
+    url: /10-Distributions
+    not_numbered: true
+  - title: 11-TestingDistributions
+    url: /11-TestingDistributions
+    not_numbered: true
+  - title: 13-OrdinaryLeastSquares
+    url: /13-OrdinaryLeastSquares
+    not_numbered: true
+  - title: 14-LinearModels
+    url: /14-LinearModels
+    not_numbered: true
+  - title: 15-Clustering
+    url: /15-Clustering
+    not_numbered: true
+  - title: 16-DimensionalityReduction
+    url: /16-DimensionalityReduction
+    not_numbered: true
+  - title: 17-Classification
+    url: /17-Classification
+    not_numbered: true
+  - title: 18-NaturalLanguageProcessing
+    url: /18-NaturalLanguageProcessing
+    not_numbered: true
+  - title: A1-PythonPackages
+    url: /A1-PythonPackages
+    not_numbered: true
+  - title: A2-Git
+    url: /A2-Git
+    not_numbered: true

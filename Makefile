@@ -10,14 +10,14 @@ help:
 textbook:
 	python scripts/clean.py
 
-	rm -rf notebooks
+	rm -rf content
 
-	git clone --depth 1 https://github.com/COGS108/tutorials notebooks
+	git clone --depth 1 https://github.com/COGS108/tutorials content
+	rm content/README.md
 
-	python scripts/generate_summary_from_folders.py --overwrite
-	python scripts/generate_textbook.py
+	python scripts/generate_book.py
 
-	rm -rf notebooks
+	rm -rf content
 
 runall:
 	python scripts/execute_all_notebooks.py
